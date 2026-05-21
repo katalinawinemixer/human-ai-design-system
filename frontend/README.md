@@ -17,6 +17,20 @@ http://localhost:5173
 
 If that port is busy, Vite will choose the next available local port.
 
+## Deployment
+
+The frontend is deployed to GitHub Pages from the repository root workflow:
+
+```text
+../.github/workflows/deploy-pages.yml
+```
+
+The workflow builds this app with a GitHub Pages base path:
+
+```text
+/human-ai-design-system/
+```
+
 ## Current Sections
 
 ```text

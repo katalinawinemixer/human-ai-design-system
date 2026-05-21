@@ -4,12 +4,21 @@ Human-AI Design System is a portfolio project for AI-native product interfaces: 
 
 It is the first project in a Thinking Machines-style designer portfolio sequence. The goal is to show a live coded prototype, strong visual and interaction craft, model-behavior judgment, and a reusable foundation for future AI product work.
 
+## Live Demo
+
+```text
+https://katalinawinemixer.github.io/human-ai-design-system/
+```
+
+The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
+
 ## Project Structure
 
 ```text
 frontend/   React, TypeScript, and Vite design-system prototype
 backend/    Reserved for future APIs, eval data, and model-behavior services
 docs/       Case-study notes and portfolio documentation
+.github/    CI and GitHub Pages deployment workflows
 ```
 
 ## What It Shows
@@ -54,6 +63,8 @@ bun run lint
 bun run build
 ```
 
+GitHub Actions also runs frontend lint and build checks on pushes and pull requests.
+
 ## Tech Stack
 
 - React
@@ -65,4 +76,9 @@ bun run build
 
 ## Status
 
-The current repo contains a working frontend prototype and documentation. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
+The current repo contains a working frontend prototype, project documentation, CI, and a GitHub Pages deployment workflow. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
+
+## Documentation
+
+- `docs/case-study.md`: portfolio case-study draft
+- `docs/roadmap.md`: project sequence, future phases, and repository organization rules
