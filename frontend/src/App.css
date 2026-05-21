@@ -889,6 +889,10 @@ main {
   gap: 16px;
 }
 
+.studio-footer-grid > .feedback-bar {
+  align-self: start;
+}
+
 .report-rows {
   display: grid;
   gap: 12px;
@@ -1017,10 +1021,15 @@ main {
   gap: 16px;
 }
 
-.trial-review-grid,
-.trial-evidence-layout {
+.trial-review-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.trial-evidence-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
