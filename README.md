@@ -135,7 +135,7 @@ GitHub Actions also runs frontend lint and build checks on pushes and pull reque
 
 ## Status
 
-The current repo contains a working frontend prototype, project documentation, CI, and a GitHub Pages deployment workflow that publishes the built app to the `gh-pages` branch. Phase 1 is complete and Phase 2 has started with the first Model Behavior Studio workflow. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
+The current repo contains a working frontend prototype, project documentation, CI, and a GitHub Pages deployment workflow that publishes the built app to the `gh-pages` branch. Phase 1 and Phase 2 frontend baselines are complete. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
 
 ## Documentation
 

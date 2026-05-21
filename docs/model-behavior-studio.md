@@ -12,10 +12,12 @@ It includes:
 - Profile filters for baseline, review, and blocked behavior states.
 - An editable prompt playground surface for the active profile.
 - Three-way response comparison.
+- Selectable response winners.
 - A scoring rubric for grounding, calibration, usefulness, and tone.
-- Prompt history tied to the active behavior profile.
+- Prompt history tied to the active behavior profile, including newly saved prompt drafts.
 - Human feedback state for reviewer judgment.
-- An export-style eval report panel that records source set, run count, prompt state, decision, risk, next eval, and export scope.
+- An export-style eval report panel that records source set, run count, prompt state, selected response, decision, risk, next eval, and export scope.
+- Generated export preview for the active behavior profile.
 - Desktop and mobile README screenshots for the current studio surface.
 
 ## Product Intent
@@ -28,10 +30,14 @@ The studio is meant to show model-behavior judgment, not just UI craft. The inte
 - What prompt change produced the better answer?
 - What should be tested next before the behavior ships?
 
-## Remaining Phase 2 Work
+## Backend Decision
 
-- Add selectable response winners instead of using fixture-selected winners only.
-- Add prompt version creation when a draft is saved.
-- Add a more realistic report export interaction.
-- Refresh screenshots as the surface matures.
-- Decide whether any backend is needed for saved evals, profiles, or report exports.
+No backend is needed for the current Phase 2 portfolio baseline. Local state is enough to demonstrate the product workflow: edit a prompt, save a version, choose a winning response, and generate an export preview.
+
+The reserved `backend/` folder should stay empty until the project needs durable saved evals, authenticated profile storage, real report downloads, or model-provider integrations.
+
+## Future Polish
+
+- Refresh screenshots when the visual surface changes.
+- Add real file download behavior if export artifacts become part of the portfolio story.
+- Add persistence only when saved eval history becomes important enough to justify backend scope.

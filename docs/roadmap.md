@@ -32,7 +32,7 @@ Completed scope:
 
 ## Phase 2: Model Behavior Studio
 
-Status: in progress
+Status: complete
 
 Goal: create a product prototype for comparing, scoring, and tuning AI response behavior.
 
@@ -50,17 +50,19 @@ Completed so far:
 - Profile filters for baseline, review, and blocked states
 - Editable prompt playground surface with save status
 - Three-way response comparison
+- Selectable response winners
 - Scoring rubric for grounding, calibration, usefulness, and tone
-- Prompt history tied to the active profile
-- Export-style eval report panel with source set, run count, prompt state, decision, risk, next eval, and export scope
+- Prompt history tied to the active profile, including saved prompt drafts
+- Export-style eval report panel with source set, run count, prompt state, selected response, decision, risk, next eval, and export scope
+- Generated export preview for the active behavior profile
 - Desktop and mobile README screenshots for the studio surface
+- Backend decision: no backend required for this portfolio baseline
 
-Remaining Phase 2 work:
+Future Phase 2 polish:
 
-- Add selectable response winners.
-- Create prompt-history entries from saved drafts.
-- Add a more realistic report export interaction.
-- Decide whether saved evals or profile persistence need a backend.
+- Refresh screenshots when the studio surface changes.
+- Add real file download behavior if export artifacts become part of the portfolio story.
+- Add persistence only if saved eval history becomes important enough to justify backend scope.
 
 ## Phase 3: TrialSense
 

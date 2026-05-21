@@ -18,22 +18,49 @@ const defaultResponses = [
   ],
 ] as const
 
-type ResponseColumn = readonly [string, SignalTone, string, string, boolean]
+export type ResponseColumn = readonly [
+  string,
+  SignalTone,
+  string,
+  string,
+  boolean,
+]
 
 export function ComparisonWorkspace({
   responses = defaultResponses,
+  selectedTitle,
+  onSelect,
 }: {
   responses?: readonly ResponseColumn[]
+  selectedTitle?: string
+  onSelect?: (title: string) => void
 }) {
   return (
     <div className="comparison">
-      {responses.map(([badge, tone, title, body, selected]) => (
-        <div className={`response-column ${selected ? 'selected' : ''}`} key={title}>
-          <SignalBadge tone={tone}>{badge}</SignalBadge>
-          <h3>{title}</h3>
-          <p>{body}</p>
-        </div>
-      ))}
+      {responses.map(([badge, tone, title, body, selected]) => {
+        const isSelected = selectedTitle ? title === selectedTitle : selected
+
+        return (
+          <div
+            className={`response-column ${isSelected ? 'selected' : ''}`}
+            key={title}
+          >
+            <SignalBadge tone={tone}>{badge}</SignalBadge>
+            <h3>{title}</h3>
+            <p>{body}</p>
+            {onSelect ? (
+              <button
+                aria-pressed={isSelected}
+                className="response-select"
+                onClick={() => onSelect(title)}
+                type="button"
+              >
+                {isSelected ? 'Selected winner' : 'Select winner'}
+              </button>
+            ) : null}
+          </div>
+        )
+      })}
     </div>
   )
 }

@@ -85,6 +85,8 @@ Props:
 | Prop | Type | Purpose |
 | --- | --- | --- |
 | `responses` | `[badge, tone, title, body, selected][]` | Response columns for side-by-side comparison |
+| `selectedTitle` | `string` | Optional controlled selected response title |
+| `onSelect` | `(title: string) => void` | Optional winner-selection handler |
 
 ## ReviewBanner
 

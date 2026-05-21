@@ -31,6 +31,32 @@ export function ModelBehaviorStudioSection() {
       behaviorProfiles.map((profile) => [profile.name, profile.prompt]),
     ),
   )
+  const [selectedResponses, setSelectedResponses] = useState<
+    Record<string, string>
+  >(() =>
+    Object.fromEntries(
+      behaviorProfiles.map((profile) => [
+        profile.name,
+        profile.responses.find((response) => response[4])?.[2] ??
+          profile.responses[0][2],
+      ]),
+    ),
+  )
+  const [promptHistories, setPromptHistories] = useState<
+    Record<string, [string, string, boolean][]>
+  >(() =>
+    Object.fromEntries(
+      behaviorProfiles.map((profile) => [
+        profile.name,
+        profile.promptHistory.map(([version, label, current]) => [
+          version,
+          label,
+          current,
+        ]),
+      ]),
+    ),
+  )
+  const [exportRecords, setExportRecords] = useState<Record<string, string>>({})
 
   const filteredProfiles = behaviorProfiles.filter(
     (profile) => activeFilter === 'All' || profile.stage === activeFilter,
@@ -39,6 +65,73 @@ export function ModelBehaviorStudioSection() {
     behaviorProfiles.find((item) => item.name === activeProfileName) ??
     behaviorProfiles[0]
   const activePrompt = promptDrafts[profile.name] ?? profile.prompt
+  const selectedResponseTitle =
+    selectedResponses[profile.name] ??
+    profile.responses.find((response) => response[4])?.[2] ??
+    profile.responses[0][2]
+  const selectedResponse =
+    profile.responses.find((response) => response[2] === selectedResponseTitle) ??
+    profile.responses[0]
+  const activeHistory = promptHistories[profile.name] ?? profile.promptHistory
+  const activeReportRows = profile.reportRows.map(([label, value]) =>
+    label === 'Decision'
+      ? [
+          label,
+          `Use ${selectedResponseTitle} as the current winner for ${profile.name}`,
+        ]
+      : label === 'Export scope'
+        ? [
+            label,
+            `Include active prompt, ${selectedResponseTitle}, rubric scores, reviewer feedback, and export preview`,
+          ]
+      : [label, value],
+  )
+
+  function savePromptDraft() {
+    const nextVersion = `v${activeHistory.length + 1}`
+    const promptLabel =
+      activePrompt.length > 58
+        ? `${activePrompt.slice(0, 58).trim()}...`
+        : activePrompt
+
+    setPromptHistories({
+      ...promptHistories,
+      [profile.name]: [
+        [nextVersion, `Saved draft: ${promptLabel}`, true],
+        ...activeHistory.map(([version, label]) => [version, label, false] as [
+          string,
+          string,
+          boolean,
+        ]),
+      ],
+    })
+    setPromptStatus('Saved prompt')
+    setReportStatus('Draft report')
+    setExportRecords(removeCurrentExport)
+  }
+
+  function generateExport() {
+    setExportRecords({
+      ...exportRecords,
+      [profile.name]: [
+        `Model Behavior Studio export`,
+        `Profile: ${profile.name}`,
+        `Stage: ${profile.stage}`,
+        `Source set: ${profile.sourceSet}`,
+        `Eval run: ${profile.lastRun}`,
+        `Selected response: ${selectedResponseTitle}`,
+        `Decision: ${activeReportRows[0][1]}`,
+        `Reviewer signal: ${profile.feedbackStatus}`,
+      ].join('\n'),
+    })
+    setReportStatus('Export ready')
+  }
+
+  function removeCurrentExport(records: Record<string, string>) {
+    const nextRecords = { ...records }
+    delete nextRecords[profile.name]
+    return nextRecords
+  }
 
   return (
     <section className="model-studio-section" id="model-studio">
@@ -110,14 +203,12 @@ export function ModelBehaviorStudioSection() {
                 })
                 setPromptStatus('Unsaved draft')
                 setReportStatus('Draft report')
+                setExportRecords(removeCurrentExport)
               }}
             />
             <div className="prompt-actions">
               <span>{promptStatus}</span>
-              <button
-                onClick={() => setPromptStatus('Saved prompt')}
-                type="button"
-              >
+              <button onClick={savePromptDraft} type="button">
                 <Save size={15} />
                 Save
               </button>
@@ -147,7 +238,18 @@ export function ModelBehaviorStudioSection() {
               <GitCompareArrows size={18} />
               <strong>Response comparison</strong>
             </div>
-            <ComparisonWorkspace responses={profile.responses} />
+            <ComparisonWorkspace
+              onSelect={(title) => {
+                setSelectedResponses({
+                  ...selectedResponses,
+                  [profile.name]: title,
+                })
+                setReportStatus('Draft report')
+                setExportRecords(removeCurrentExport)
+              }}
+              responses={profile.responses}
+              selectedTitle={selectedResponseTitle}
+            />
           </div>
 
           <div className="studio-lower-grid">
@@ -168,9 +270,10 @@ export function ModelBehaviorStudioSection() {
                 <span>{profile.sourceSet}</span>
                 <span>{profile.lastRun}</span>
                 <span>{promptStatus}</span>
+                <span>{`${selectedResponseTitle} selected`}</span>
               </div>
               <div className="report-rows">
-                {profile.reportRows.map(([label, value]) => (
+                {activeReportRows.map(([label, value]) => (
                   <div className="report-row" key={label}>
                     <span>{label}</span>
                     <p>{value}</p>
@@ -179,11 +282,20 @@ export function ModelBehaviorStudioSection() {
               </div>
               <button
                 className="report-button"
-                onClick={() => setReportStatus('Export ready')}
+                onClick={generateExport}
                 type="button"
               >
                 {reportStatus}
               </button>
+              {exportRecords[profile.name] ? (
+                <div className="export-preview" aria-label="Generated export preview">
+                  <div>
+                    <strong>Export package</strong>
+                    <span>{selectedResponse[0]}</span>
+                  </div>
+                  <pre>{exportRecords[profile.name]}</pre>
+                </div>
+              ) : null}
             </div>
           </div>
 
@@ -193,7 +305,7 @@ export function ModelBehaviorStudioSection() {
                 <SlidersHorizontal size={18} />
                 <strong>Prompt history</strong>
               </div>
-              <PromptHistory items={profile.promptHistory} />
+              <PromptHistory items={activeHistory} />
             </div>
             <FeedbackBar
               selected={profile.feedbackState}
