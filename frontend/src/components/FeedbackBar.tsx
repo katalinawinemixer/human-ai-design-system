@@ -1,18 +1,36 @@
 import { AlertTriangle, ThumbsDown, ThumbsUp } from 'lucide-react'
 
-export function FeedbackBar() {
+export function FeedbackBar({
+  status = 'Feedback captured for behavior tuning',
+  selected,
+}: {
+  status?: string
+  selected?: 'useful' | 'speculative' | 'unhelpful'
+}) {
   return (
     <div className="feedback-bar" aria-label="Model feedback controls">
-      <button type="button" aria-label="Mark useful">
+      <button
+        className={selected === 'useful' ? 'selected' : undefined}
+        type="button"
+        aria-label="Mark useful"
+      >
         <ThumbsUp size={16} />
       </button>
-      <button type="button" aria-label="Mark too speculative">
+      <button
+        className={selected === 'speculative' ? 'selected' : undefined}
+        type="button"
+        aria-label="Mark too speculative"
+      >
         <AlertTriangle size={16} />
       </button>
-      <button type="button" aria-label="Mark unhelpful">
+      <button
+        className={selected === 'unhelpful' ? 'selected' : undefined}
+        type="button"
+        aria-label="Mark unhelpful"
+      >
         <ThumbsDown size={16} />
       </button>
-      <span>Feedback captured for behavior tuning</span>
+      <span>{status}</span>
     </div>
   )
 }

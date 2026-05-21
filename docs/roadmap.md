@@ -19,11 +19,11 @@ Current scope:
 - Response comparison workspace
 - Human review banner
 - Component specification section with jobs, states, and reuse paths
+- Visual inventory section for component state examples
 
 Next improvements:
 
 - Add screenshots and a short demo GIF.
-- Add a visual inventory page for every component state.
 - Add sample scenarios beyond clinical-trial diligence.
 - Expand the data layer so examples are easier to swap across use cases.
 

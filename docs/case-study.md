@@ -36,6 +36,7 @@ The current app includes:
 - Response comparison workspace
 - Human review banner
 - Component specification section with jobs, states, and reuse paths
+- Visual inventory section for checking component states
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
@@ -46,6 +47,7 @@ The example content uses clinical-trial diligence scenarios because they connect
 - Product judgment around trust, confidence, and review
 - Model-behavior thinking beyond generic chatbot UI
 - Organized documentation that turns UI ideas into reusable product rules
+- Component states that can be reused in later product prototypes
 - A domain-specific point of view grounded in clinical-trial operations
 
 ## Next Iterations

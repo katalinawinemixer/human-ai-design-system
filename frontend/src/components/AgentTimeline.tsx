@@ -1,9 +1,15 @@
 import { timeline } from '../data/designSystemContent'
 
-export function AgentTimeline() {
+type TimelineEntry = readonly [string, string, string]
+
+export function AgentTimeline({
+  entries = timeline,
+}: {
+  entries?: readonly TimelineEntry[]
+}) {
   return (
     <div className="timeline">
-      {timeline.map(([label, detail, state]) => (
+      {entries.map(([label, detail, state]) => (
         <div className={`timeline-row timeline-${state}`} key={label}>
           <span className="timeline-dot" />
           <div>

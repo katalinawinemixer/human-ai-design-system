@@ -25,4 +25,5 @@ This document keeps the Human-AI Design System organized as a reusable product f
 - UI examples live in `frontend/src/components/`.
 - Static example content lives in `frontend/src/data/designSystemContent.ts`.
 - Page-level presentation lives in `frontend/src/sections/`.
+- Visual state examples render in `frontend/src/sections/InventorySection.tsx`.
 - This document should be updated whenever a component adds a new state, interaction, or reuse target.

@@ -1,9 +1,15 @@
 import { evalRows } from '../data/designSystemContent'
 
-export function EvalScorecard() {
+type EvalRow = readonly [string, number, string]
+
+export function EvalScorecard({
+  rows = evalRows,
+}: {
+  rows?: readonly EvalRow[]
+}) {
   return (
     <div className="scorecard">
-      {evalRows.map(([label, score, note]) => (
+      {rows.map(([label, score, note]) => (
         <div className="score-row" key={label}>
           <div>
             <strong>{label}</strong>

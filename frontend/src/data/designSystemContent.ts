@@ -127,4 +127,173 @@ export const reviewChecklist = [
   ],
 ] as const
 
-export type Citation = (typeof citations)[number]
+export const inventoryCitationStates = [
+  {
+    title: 'Direct source support',
+    source: 'Protocol synopsis, section 4.2',
+    quote: 'Eligibility language is directly present in the reviewed source.',
+    confidence: 'High',
+    tone: 'evidence',
+  },
+  {
+    title: 'Inferred operational risk',
+    source: 'Comparable trial enrollment patterns',
+    quote: 'Screen-failure risk is inferred from analogous study criteria.',
+    confidence: 'Medium',
+    tone: 'caution',
+  },
+  {
+    title: 'Missing source requirement',
+    source: 'Source not attached',
+    quote: 'The claim should not be used until a supporting document is linked.',
+    confidence: 'Low',
+    tone: 'caution',
+  },
+] as const
+
+export const inventoryConfidenceStates = [
+  [
+    'High',
+    92,
+    'Direct source support is present and the answer stays within the evidence.',
+  ],
+  [
+    'Moderate',
+    68,
+    'The answer is directionally useful, but one claim depends on comparable examples.',
+  ],
+  [
+    'Low',
+    34,
+    'The model has partial context and should ask for more source material.',
+  ],
+  [
+    'Blocked',
+    8,
+    'Required evidence is missing, so the system should not generate a final answer.',
+  ],
+] as const
+
+export const inventoryTimelineStates = [
+  [
+    ['Source set reviewed', 'Complete', 'done'],
+    ['Findings drafted', 'Complete', 'done'],
+    ['Reviewer notified', 'Complete', 'done'],
+  ],
+  [
+    ['Reading source set', 'Complete', 'done'],
+    ['Checking contradictions', 'In progress', 'active'],
+    ['Drafting output', 'Queued', 'waiting'],
+  ],
+  [
+    ['Source upload detected', 'Complete', 'done'],
+    ['Waiting for reviewer', 'Approval required', 'waiting'],
+    ['Export summary', 'Blocked until approval', 'waiting'],
+  ],
+  [
+    ['Source set reviewed', 'Complete', 'done'],
+    ['Citation check failed', 'Missing source link', 'error'],
+    ['Final answer', 'Stopped', 'waiting'],
+  ],
+] as const
+
+export const inventoryFeedbackStates = [
+  ['Useful', 'Feedback marked useful for behavior tuning', 'useful'],
+  ['Speculative', 'Reviewer flagged unsupported inference', 'speculative'],
+  ['Unhelpful', 'Reviewer rejected the response direction', 'unhelpful'],
+] as const
+
+export const inventoryEvalStates = [
+  [
+    ['Grounding', 94, 'Every claim has source support'],
+    ['Calibration', 88, 'Uncertainty language matches evidence'],
+    ['Usefulness', 91, 'Next action is clear'],
+  ],
+  [
+    ['Grounding', 71, 'One claim needs a source'],
+    ['Calibration', 62, 'Confidence should be softer'],
+    ['Usefulness', 79, 'Good direction with review needed'],
+  ],
+  [
+    ['Grounding', 48, 'Several claims are unsupported'],
+    ['Calibration', 41, 'Output overstates certainty'],
+    ['Usefulness', 52, 'Reviewer intervention required'],
+  ],
+] as const
+
+export const inventoryPromptStates = [
+  [
+    ['v4', 'Require trial-specific source citations', true],
+    ['v3', 'Ask for uncertainty on inferred risks', false],
+    ['v2', 'Summarize feasibility risks', false],
+  ],
+  [
+    ['v2', 'Compare answer tone for operator audience', true],
+    ['v1', 'Generate an investor-style diligence note', false],
+  ],
+  [
+    ['v1', 'Draft answer without source gating', false],
+    ['archived', 'Removed after citation review failed', true],
+  ],
+] as const
+
+export const inventoryComparisonStates = [
+  [
+    [
+      'Needs review',
+      'warn',
+      'Response A',
+      'Useful summary, but it implies enrollment confidence without citing source data.',
+      false,
+    ],
+    [
+      'Preferred',
+      'good',
+      'Response B',
+      'Keeps feasibility language cautious and names the source gap clearly.',
+      true,
+    ],
+  ],
+  [
+    [
+      'Too vague',
+      'danger',
+      'Response A',
+      'The trial may be feasible if enough sites are available.',
+      false,
+    ],
+    [
+      'More actionable',
+      'evidence',
+      'Response B',
+      'Feasibility depends on site mix, screen-failure rate, and steroid exclusion volume.',
+      true,
+    ],
+  ],
+] as const
+
+export const inventoryReviewStates = [
+  [
+    'Human review required',
+    'Two inferred claims need source validation before this answer can be used.',
+    'Review',
+  ],
+  [
+    'Review recommended',
+    'The answer is usable as a draft, but confidence language should be checked.',
+    'Check',
+  ],
+  [
+    'Approved for export',
+    'Claims are sourced, uncertainty is labeled, and the reviewer accepted the output.',
+    'Export',
+  ],
+] as const
+
+export type Citation = {
+  title: string
+  source: string
+  quote: string
+  confidence: string
+  tone: 'evidence' | 'caution'
+}

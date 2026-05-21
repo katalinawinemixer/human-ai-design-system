@@ -26,6 +26,7 @@ docs/       Case-study notes and portfolio documentation
 - A polished AI product surface built in code.
 - Interface primitives for evidence, uncertainty, feedback, evals, and review.
 - Component specifications with state models and reuse paths.
+- A visual inventory that shows component states before reuse in product screens.
 - A reusable system that can support multiple AI product concepts.
 - Clinical-trial diligence examples that connect the design work to real operator judgment.
 

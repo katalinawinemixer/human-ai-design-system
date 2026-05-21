@@ -6,6 +6,7 @@ main {
 .case-study-section,
 .principles-section,
 .specifications-section,
+.inventory-section,
 .components-section {
   padding: 28px clamp(20px, 4vw, 56px);
 }
@@ -297,6 +298,12 @@ main {
   background: var(--surface);
 }
 
+.feedback-bar button.selected {
+  border-color: rgba(9, 124, 119, 0.4);
+  color: var(--teal);
+  background: var(--teal-soft);
+}
+
 .feedback-bar span {
   margin-left: 2px;
   font-size: 13px;
@@ -337,9 +344,15 @@ main {
   background: var(--teal-soft);
 }
 
+.timeline-error .timeline-dot {
+  border-color: var(--red);
+  background: var(--red-soft);
+}
+
 .principles-section,
 .case-study-section,
 .specifications-section,
+.inventory-section,
 .components-section {
   border-top: 1px solid var(--line);
   background: rgba(255, 253, 248, 0.42);
@@ -491,6 +504,61 @@ main {
 
 .checklist-row p {
   margin-top: 5px;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.inventory-card {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--surface);
+}
+
+.inventory-card.wide {
+  grid-column: span 2;
+}
+
+.inventory-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.inventory-heading .component-heading {
+  margin-bottom: 0;
+}
+
+.inventory-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.inventory-stack.compact {
+  gap: 14px;
+}
+
+.inventory-state-row {
+  display: grid;
+  gap: 8px;
+}
+
+.inventory-card .confidence-panel,
+.inventory-card .timeline {
+  min-height: auto;
+}
+
+.inventory-card .comparison {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .case-study-grid {
@@ -747,6 +815,7 @@ main {
 
   .reuse-grid,
   .spec-grid,
+  .inventory-grid,
   .component-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -775,8 +844,21 @@ main {
   .hero-grid,
   .reuse-grid,
   .spec-grid,
+  .inventory-grid,
   .component-grid,
   .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-card.wide {
+    grid-column: span 1;
+  }
+
+  .inventory-heading {
+    flex-direction: column;
+  }
+
+  .inventory-card .comparison {
     grid-template-columns: 1fr;
   }
 

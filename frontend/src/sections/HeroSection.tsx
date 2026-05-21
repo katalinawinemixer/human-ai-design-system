@@ -22,6 +22,9 @@ export function HeroSection() {
           <a href="#specs">
             Specs <ChevronRight size={16} />
           </a>
+          <a href="#inventory">
+            Inventory <ChevronRight size={16} />
+          </a>
           <a href="#components">
             Components <ChevronRight size={16} />
           </a>
