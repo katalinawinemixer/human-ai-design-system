@@ -551,6 +551,7 @@ main {
 .inventory-card {
   display: grid;
   align-content: start;
+  align-self: start;
   gap: 16px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -799,6 +800,7 @@ main {
 .prompt-playground,
 .studio-panel {
   display: grid;
+  align-content: start;
   gap: 14px;
   padding: 16px;
 }
