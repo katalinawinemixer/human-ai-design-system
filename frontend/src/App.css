@@ -267,11 +267,14 @@ main {
 .review-banner button {
   border: 0;
   border-radius: var(--radius);
-  padding: 9px 11px;
+  padding: 9px 16px;
   color: var(--surface);
   background: var(--teal);
   font-size: 13px;
   font-weight: 760;
+  cursor: pointer;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .confidence-panel {
@@ -1295,6 +1298,7 @@ main {
 
 .component-specimen {
   min-height: 270px;
+  align-self: start;
   padding: 16px;
   box-shadow: none;
 }

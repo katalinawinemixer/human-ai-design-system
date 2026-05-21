@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck } from 'lucide-react'
+import { ShieldCheck } from 'lucide-react'
 
 type ReviewBannerProps = {
   title?: string
@@ -19,7 +19,7 @@ export function ReviewBanner({
         <p>{body}</p>
       </div>
       <button type="button">
-        {actionLabel} <ArrowRight size={16} />
+        {actionLabel}
       </button>
     </div>
   )
