@@ -22,6 +22,10 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ![Component specs with jobs, states, and reuse paths](docs/assets/screenshots/system-specs.png)
 
+### Scenario library
+
+![Scenario library across clinical diligence, model behavior, and research synthesis](docs/assets/screenshots/scenario-library.png)
+
 ### Visual inventory
 
 ![Visual inventory of component states](docs/assets/screenshots/visual-inventory.png)
@@ -45,6 +49,7 @@ This project turns those trust decisions into reusable coded components. The sam
 
 - A live React and TypeScript prototype for AI-native product surfaces.
 - Reusable components for evidence, uncertainty, feedback, evals, prompt history, response comparison, agent progress, and human review.
+- A scenario library showing how the same primitives adapt across clinical diligence, model-behavior review, and research synthesis.
 - A system-specs section that defines component jobs, state models, and reuse paths.
 - A visual inventory that shows component states before they are reused in larger product screens.
 - Organized documentation for the case study, roadmap, and component specifications.
@@ -56,6 +61,7 @@ This project turns those trust decisions into reusable coded components. The sam
 - Interface primitives for evidence, uncertainty, feedback, evals, and review.
 - Component specifications with state models and reuse paths.
 - A visual inventory that shows component states before reuse in product screens.
+- Scenario examples beyond the original clinical-trial diligence use case.
 - A reusable system that can support multiple AI product concepts.
 - Clinical-trial diligence examples that connect the design work to real operator judgment.
 

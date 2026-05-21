@@ -21,12 +21,13 @@ Current scope:
 - Component specification section with jobs, states, and reuse paths
 - Visual inventory section for component state examples
 - README showcase with screenshots from the live prototype
+- Scenario library with clinical diligence, model-behavior review, and research synthesis examples
 
 Next improvements:
 
 - Add a short demo GIF.
-- Add sample scenarios beyond clinical-trial diligence.
-- Expand the data layer so examples are easier to swap across use cases.
+- Add a compact scenario-switching interaction to the hero prototype.
+- Expand scenario examples into a reusable fixture structure for follow-on projects.
 
 ## Phase 2: Model Behavior Studio
 

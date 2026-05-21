@@ -69,6 +69,72 @@ export const reuseMap = [
   ],
 ] as const
 
+export const scenarioLibrary = [
+  {
+    title: 'Clinical-trial diligence',
+    context:
+      'Review trial feasibility and eligibility risk before the output becomes an investor-facing note.',
+    question: 'Can this claim be used in a diligence memo?',
+    confidence: 'Moderate-high',
+    confidenceValue: 76,
+    evidence:
+      'Eligibility criteria are sourced, but enrollment feasibility still depends on comparable studies.',
+    review: 'Human review required',
+    primitives: [
+      'Citation cards',
+      'Confidence meter',
+      'Agent timeline',
+      'Human review banner',
+    ],
+    sampleClaims: [
+      ['Supported', 'Steroid exclusion appears in the source protocol.'],
+      ['Inferred', 'Enrollment pace is based on comparable oncology trials.'],
+    ],
+  },
+  {
+    title: 'Model behavior review',
+    context:
+      'Compare two model answers and decide which behavior should become the preferred response pattern.',
+    question: 'Which answer is better calibrated?',
+    confidence: 'Medium',
+    confidenceValue: 64,
+    evidence:
+      'One response is more useful, but the evaluator flags tone and evidence discipline for review.',
+    review: 'Review recommended',
+    primitives: [
+      'Response comparison',
+      'Eval scorecard',
+      'Feedback controls',
+      'Prompt history',
+    ],
+    sampleClaims: [
+      ['Preferred', 'Answer B names uncertainty and asks for missing context.'],
+      ['Needs work', 'Answer A sounds confident without enough support.'],
+    ],
+  },
+  {
+    title: 'Research synthesis',
+    context:
+      'Summarize a source set while making citation quality, missing context, and uncertainty visible.',
+    question: 'Is this synthesis ready to share?',
+    confidence: 'Low-moderate',
+    confidenceValue: 48,
+    evidence:
+      'The system found useful source material, but two assertions require stronger citations.',
+    review: 'Source check needed',
+    primitives: [
+      'Citation cards',
+      'Eval scorecard',
+      'Agent timeline',
+      'Review banner',
+    ],
+    sampleClaims: [
+      ['Supported', 'Primary source confirms the central finding.'],
+      ['Needs source', 'Market implication is not directly supported.'],
+    ],
+  },
+] as const
+
 export const componentSpecs = [
   {
     name: 'Source citation card',

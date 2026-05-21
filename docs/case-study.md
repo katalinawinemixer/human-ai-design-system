@@ -37,6 +37,7 @@ The current app includes:
 - Human review banner
 - Component specification section with jobs, states, and reuse paths
 - Visual inventory section for checking component states
+- Scenario library with clinical diligence, model-behavior review, and research synthesis examples
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
@@ -48,12 +49,13 @@ The example content uses clinical-trial diligence scenarios because they connect
 - Model-behavior thinking beyond generic chatbot UI
 - Organized documentation that turns UI ideas into reusable product rules
 - Component states that can be reused in later product prototypes
+- Scenario examples that show the system is not limited to one domain
 - A domain-specific point of view grounded in clinical-trial operations
 
 ## Next Iterations
 
 - Split each primitive into reusable component files.
 - Add screenshots and a demo GIF.
-- Expand the example data layer so the components can render different AI review scenarios.
+- Turn the scenario library into reusable fixtures for follow-on prototypes.
 - Use the primitives in Model Behavior Studio.
 - Adapt the clinical-trial patterns for TrialSense.

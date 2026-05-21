@@ -4,11 +4,13 @@ main {
 
 .hero-section,
 .case-study-section,
+.scenario-section,
 .principles-section,
 .specifications-section,
 .inventory-section,
 .components-section {
   padding: 28px clamp(20px, 4vw, 56px);
+  scroll-margin-top: 24px;
 }
 
 .hero-section {
@@ -351,6 +353,7 @@ main {
 
 .principles-section,
 .case-study-section,
+.scenario-section,
 .specifications-section,
 .inventory-section,
 .components-section {
@@ -559,6 +562,124 @@ main {
 
 .inventory-card .comparison {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.scenario-card {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--surface);
+}
+
+.scenario-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.scenario-card-header .component-heading {
+  margin-bottom: 0;
+}
+
+.scenario-card > p,
+.scenario-meter p,
+.scenario-claim p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.scenario-question {
+  border-left: 3px solid var(--teal);
+  padding: 10px 12px;
+  background: var(--teal-soft);
+}
+
+.scenario-question span {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.scenario-meter {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: #fbfaf6;
+}
+
+.scenario-meter > div:first-child,
+.scenario-primitives-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--teal);
+}
+
+.scenario-meter strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.scenario-claims {
+  display: grid;
+  gap: 8px;
+}
+
+.scenario-claim {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 10px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.scenario-claim:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.scenario-primitives {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.scenario-primitives-label span {
+  color: var(--subtle);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.scenario-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.scenario-tags span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: var(--ink);
+  background: #fbfaf6;
+  font-size: 12px;
+  font-weight: 750;
 }
 
 .case-study-grid {
@@ -808,6 +929,7 @@ main {
   .hero-grid,
   .surface-grid,
   .case-study-grid,
+  .scenario-grid,
   .spec-layout,
   .principles-grid {
     grid-template-columns: 1fr;
@@ -843,6 +965,7 @@ main {
 
   .hero-grid,
   .reuse-grid,
+  .scenario-grid,
   .spec-grid,
   .inventory-grid,
   .component-grid,
@@ -855,6 +978,15 @@ main {
   }
 
   .inventory-heading {
+    flex-direction: column;
+  }
+
+  .scenario-card-header,
+  .scenario-claim {
+    grid-template-columns: 1fr;
+  }
+
+  .scenario-card-header {
     flex-direction: column;
   }
 

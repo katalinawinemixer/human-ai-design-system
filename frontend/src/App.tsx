@@ -4,6 +4,7 @@ import { ComponentsSection } from './sections/ComponentsSection'
 import { HeroSection } from './sections/HeroSection'
 import { InventorySection } from './sections/InventorySection'
 import { PrinciplesSection } from './sections/PrinciplesSection'
+import { ScenarioLibrarySection } from './sections/ScenarioLibrarySection'
 import { SpecificationsSection } from './sections/SpecificationsSection'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <main>
       <HeroSection />
       <CaseStudySection />
+      <ScenarioLibrarySection />
       <PrinciplesSection />
       <SpecificationsSection />
       <InventorySection />
