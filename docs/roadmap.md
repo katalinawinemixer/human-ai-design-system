@@ -4,11 +4,11 @@ This roadmap keeps the portfolio system organized as it grows. The current repo 
 
 ## Phase 1: Human-AI Design System
 
-Status: in progress
+Status: complete
 
 Goal: build and document reusable AI-native interface primitives.
 
-Current scope:
+Completed scope:
 
 - Source citation cards
 - Confidence meter
@@ -26,12 +26,9 @@ Current scope:
 - Component API reference
 - Usage notes for each primitive
 - Short README demo GIF
-
-Next improvements:
-
-- Expand scenario examples into a reusable fixture structure for follow-on projects.
-- Add accessibility notes for keyboard behavior, labels, and contrast.
-- Add mobile screenshots to the README.
+- Reusable scenario fixture structure for follow-on projects
+- Accessibility notes for keyboard behavior, labels, contrast, and review states
+- Mobile README screenshots
 
 ## Phase 2: Model Behavior Studio
 

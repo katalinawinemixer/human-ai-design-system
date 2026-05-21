@@ -30,6 +30,14 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ![Scenario library across clinical diligence, model behavior, and research synthesis](docs/assets/screenshots/scenario-library.png)
 
+### Mobile hero
+
+![Mobile view of the Human-AI Design System hero](docs/assets/screenshots/mobile-hero.png)
+
+### Mobile scenario library
+
+![Mobile view of the scenario library](docs/assets/screenshots/mobile-scenario-library.png)
+
 ### Visual inventory
 
 ![Visual inventory of component states](docs/assets/screenshots/visual-inventory.png)
@@ -122,8 +130,10 @@ The current repo contains a working frontend prototype, project documentation, C
 
 ## Documentation
 
+- `docs/accessibility-notes.md`: keyboard, label, contrast, and review-state guidance
 - `docs/case-study.md`: portfolio case-study draft
 - `docs/component-api.md`: current component props and usage surface
 - `docs/component-specs.md`: component jobs, states, and reuse paths
 - `docs/roadmap.md`: project sequence, future phases, and repository organization rules
+- `docs/scenario-fixtures.md`: reusable scenario data structure for follow-on projects
 - `docs/usage-notes.md`: when to use each AI-interface primitive
