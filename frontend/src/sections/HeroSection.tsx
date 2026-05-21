@@ -27,6 +27,9 @@ export function HeroSection() {
           <a href="#scenarios">
             Scenarios <ChevronRight size={16} />
           </a>
+          <a href="#model-studio">
+            Studio <ChevronRight size={16} />
+          </a>
           <a href="#specs">
             Specs <ChevronRight size={16} />
           </a>

@@ -32,24 +32,34 @@ Completed scope:
 
 ## Phase 2: Model Behavior Studio
 
-Status: planned
+Status: in progress
 
 Goal: create a product prototype for comparing, scoring, and tuning AI response behavior.
 
-Planned building blocks from this repo:
+Building blocks from this repo:
 
 - Prompt history panel
 - Response comparison workspace
 - Evaluation scorecard
 - Human feedback controls
 
-Potential features:
+Completed so far:
 
-- Prompt playground
-- Behavior profiles
+- First Model Behavior Studio section in the live frontend
+- Behavior profile switcher
+- Prompt playground surface
 - Side-by-side response comparison
 - Scoring rubric for grounding, calibration, usefulness, and tone
-- Exportable eval report
+- Prompt history tied to the active profile
+- Lightweight eval report panel
+
+Remaining Phase 2 work:
+
+- Make the prompt playground editable with local state.
+- Add richer profile metadata and filtering.
+- Expand comparison to support more candidate responses.
+- Create a fuller exportable eval report view.
+- Decide whether saved evals or profile persistence need a backend.
 
 ## Phase 3: TrialSense
 

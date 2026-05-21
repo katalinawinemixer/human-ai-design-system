@@ -5,6 +5,7 @@ main {
 .hero-section,
 .case-study-section,
 .scenario-section,
+.model-studio-section,
 .principles-section,
 .specifications-section,
 .inventory-section,
@@ -377,6 +378,7 @@ main {
 .principles-section,
 .case-study-section,
 .scenario-section,
+.model-studio-section,
 .specifications-section,
 .inventory-section,
 .components-section {
@@ -705,6 +707,160 @@ main {
   font-weight: 750;
 }
 
+.studio-shell {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.34fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.studio-sidebar,
+.studio-panel,
+.prompt-playground {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.studio-sidebar {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+.profile-list {
+  display: grid;
+  gap: 10px;
+}
+
+.profile-list button {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  text-align: left;
+  color: var(--muted);
+  background: #fbfaf6;
+}
+
+.profile-list button.active {
+  border-color: rgba(9, 124, 119, 0.42);
+  color: var(--ink);
+  background: var(--teal-soft);
+}
+
+.profile-list span {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.profile-list small {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.prompt-playground,
+.studio-panel {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.studio-panel-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--teal);
+}
+
+.studio-panel-heading strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.prompt-playground textarea {
+  width: 100%;
+  min-height: 210px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  color: var(--ink);
+  background: #fbfaf6;
+  font: inherit;
+  font-size: 14px;
+}
+
+.prompt-playground p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.studio-workspace {
+  display: grid;
+  gap: 16px;
+}
+
+.studio-workspace-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.comparison-panel .comparison {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.studio-lower-grid,
+.studio-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.report-rows {
+  display: grid;
+  gap: 12px;
+}
+
+.report-row {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+
+.report-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.report-row span {
+  color: var(--subtle);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.report-row p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.report-button {
+  width: max-content;
+  border: 0;
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  color: #ffffff;
+  background: var(--ink);
+  font-size: 13px;
+  font-weight: 760;
+}
+
 .case-study-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -953,12 +1109,15 @@ main {
   .surface-grid,
   .case-study-grid,
   .scenario-grid,
+  .studio-shell,
   .spec-layout,
   .principles-grid {
     grid-template-columns: 1fr;
   }
 
   .reuse-grid,
+  .studio-lower-grid,
+  .studio-footer-grid,
   .spec-grid,
   .inventory-grid,
   .component-grid {
@@ -988,6 +1147,8 @@ main {
 
   .hero-grid,
   .reuse-grid,
+  .studio-lower-grid,
+  .studio-footer-grid,
   .scenario-grid,
   .spec-grid,
   .inventory-grid,
@@ -1017,6 +1178,10 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .comparison-panel .comparison {
+    grid-template-columns: 1fr;
+  }
+
   .review-checklist {
     position: static;
   }
@@ -1030,6 +1195,11 @@ main {
   }
 
   .surface-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .studio-workspace-topline {
     align-items: flex-start;
     flex-direction: column;
   }

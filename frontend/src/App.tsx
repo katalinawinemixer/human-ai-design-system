@@ -3,6 +3,7 @@ import { CaseStudySection } from './sections/CaseStudySection'
 import { ComponentsSection } from './sections/ComponentsSection'
 import { HeroSection } from './sections/HeroSection'
 import { InventorySection } from './sections/InventorySection'
+import { ModelBehaviorStudioSection } from './sections/ModelBehaviorStudioSection'
 import { PrinciplesSection } from './sections/PrinciplesSection'
 import { ScenarioLibrarySection } from './sections/ScenarioLibrarySection'
 import { SpecificationsSection } from './sections/SpecificationsSection'
@@ -13,6 +14,7 @@ function App() {
       <HeroSection />
       <CaseStudySection />
       <ScenarioLibrarySection />
+      <ModelBehaviorStudioSection />
       <PrinciplesSection />
       <SpecificationsSection />
       <InventorySection />
