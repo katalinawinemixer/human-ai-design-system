@@ -88,7 +88,13 @@ export function ModelBehaviorStudioSection() {
   )
 
   function savePromptDraft() {
-    const nextVersion = `v${activeHistory.length + 1}`
+    const latestVersion = activeHistory.reduce((highestVersion, [version]) => {
+      const versionNumber = Number(version.replace('v', ''))
+      return Number.isNaN(versionNumber)
+        ? highestVersion
+        : Math.max(highestVersion, versionNumber)
+    }, 0)
+    const nextVersion = `v${latestVersion + 1}`
     const promptLabel =
       activePrompt.length > 58
         ? `${activePrompt.slice(0, 58).trim()}...`
