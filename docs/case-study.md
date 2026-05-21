@@ -41,6 +41,8 @@ The current app includes:
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
+The Phase 2 Model Behavior Studio turns the component system into a product workflow. It shows how a reviewer can edit a behavior prompt, save a prompt version, compare candidate responses, choose the winning behavior, score the output, and generate a downloadable eval report. This demonstrates model-behavior judgment as an interface problem: the product is not only displaying AI output, it is helping a human decide which behavior should be trusted, tuned, or blocked.
+
 ## What This Demonstrates
 
 - Coded prototyping in React and TypeScript
@@ -57,5 +59,4 @@ The example content uses clinical-trial diligence scenarios because they connect
 - Split each primitive into reusable component files.
 - Add screenshots and a demo GIF.
 - Turn the scenario library into reusable fixtures for follow-on prototypes.
-- Use the primitives in Model Behavior Studio.
 - Adapt the clinical-trial patterns for TrialSense.

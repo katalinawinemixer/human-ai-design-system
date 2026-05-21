@@ -18,6 +18,7 @@ It includes:
 - Human feedback state for reviewer judgment.
 - An export-style eval report panel that records source set, run count, prompt state, selected response, decision, risk, next eval, and export scope.
 - Generated export preview for the active behavior profile.
+- Downloadable `.txt` export artifact for the generated report.
 - Desktop and mobile README screenshots for the current studio surface.
 
 ## Product Intent
@@ -39,5 +40,4 @@ The reserved `backend/` folder should stay empty until the project needs durable
 ## Future Polish
 
 - Refresh screenshots when the visual surface changes.
-- Add real file download behavior if export artifacts become part of the portfolio story.
 - Add persistence only when saved eval history becomes important enough to justify backend scope.

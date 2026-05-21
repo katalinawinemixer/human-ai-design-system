@@ -841,7 +841,8 @@ main {
   text-transform: uppercase;
 }
 
-.prompt-actions button {
+.prompt-actions button,
+.download-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -965,6 +966,10 @@ main {
   white-space: pre-wrap;
   font: inherit;
   font-size: 13px;
+}
+
+.download-link {
+  width: max-content;
 }
 
 .case-study-grid {

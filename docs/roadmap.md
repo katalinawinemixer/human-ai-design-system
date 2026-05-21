@@ -55,13 +55,13 @@ Completed so far:
 - Prompt history tied to the active profile, including saved prompt drafts
 - Export-style eval report panel with source set, run count, prompt state, selected response, decision, risk, next eval, and export scope
 - Generated export preview for the active behavior profile
+- Downloadable `.txt` export artifact
 - Desktop and mobile README screenshots for the studio surface
 - Backend decision: no backend required for this portfolio baseline
 
 Future Phase 2 polish:
 
 - Refresh screenshots when the studio surface changes.
-- Add real file download behavior if export artifacts become part of the portfolio story.
 - Add persistence only if saved eval history becomes important enough to justify backend scope.
 
 ## Phase 3: TrialSense

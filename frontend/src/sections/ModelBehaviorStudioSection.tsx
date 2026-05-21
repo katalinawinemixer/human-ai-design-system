@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {
   ClipboardCheck,
+  Download,
   FileDown,
   FlaskConical,
   GitCompareArrows,
@@ -73,6 +74,13 @@ export function ModelBehaviorStudioSection() {
     profile.responses.find((response) => response[2] === selectedResponseTitle) ??
     profile.responses[0]
   const activeHistory = promptHistories[profile.name] ?? profile.promptHistory
+  const exportRecord = exportRecords[profile.name]
+  const exportFilename = `model-behavior-studio-${profile.name
+    .toLowerCase()
+    .replaceAll(' ', '-')}.txt`
+  const exportHref = exportRecord
+    ? `data:text/plain;charset=utf-8,${encodeURIComponent(exportRecord)}`
+    : undefined
   const activeReportRows = profile.reportRows.map(([label, value]) =>
     label === 'Decision'
       ? [
@@ -299,7 +307,17 @@ export function ModelBehaviorStudioSection() {
                     <strong>Export package</strong>
                     <span>{selectedResponse[0]}</span>
                   </div>
-                  <pre>{exportRecords[profile.name]}</pre>
+                  <pre>{exportRecord}</pre>
+                  {exportHref ? (
+                    <a
+                      className="download-link"
+                      download={exportFilename}
+                      href={exportHref}
+                    >
+                      <Download size={15} />
+                      Download .txt
+                    </a>
+                  ) : null}
                 </div>
               ) : null}
             </div>
