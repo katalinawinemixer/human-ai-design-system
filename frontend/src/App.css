@@ -734,6 +734,28 @@ main {
   gap: 10px;
 }
 
+.profile-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.profile-filter button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: var(--muted);
+  background: #fbfaf6;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.profile-filter button.active {
+  border-color: rgba(9, 124, 119, 0.42);
+  color: var(--teal);
+  background: var(--teal-soft);
+}
+
 .profile-list button {
   display: grid;
   gap: 4px;
@@ -800,6 +822,33 @@ main {
   font-size: 14px;
 }
 
+.prompt-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.prompt-actions span {
+  color: var(--subtle);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.prompt-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(9, 124, 119, 0.38);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  color: var(--teal);
+  background: var(--teal-soft);
+  font-size: 13px;
+  font-weight: 760;
+}
+
 .studio-workspace {
   display: grid;
   gap: 16px;
@@ -812,7 +861,7 @@ main {
 }
 
 .comparison-panel .comparison {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .studio-lower-grid,
@@ -825,6 +874,22 @@ main {
 .report-rows {
   display: grid;
   gap: 12px;
+}
+
+.report-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.report-summary span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: var(--muted);
+  background: #fbfaf6;
+  font-size: 12px;
+  font-weight: 750;
 }
 
 .report-row {

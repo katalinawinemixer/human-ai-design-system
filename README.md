@@ -42,6 +42,10 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ![Mobile view of the scenario library](docs/assets/screenshots/mobile-scenario-library.png)
 
+### Mobile Model Behavior Studio
+
+![Mobile view of the Model Behavior Studio](docs/assets/screenshots/mobile-model-behavior-studio.png)
+
 ### Visual inventory
 
 ![Visual inventory of component states](docs/assets/screenshots/visual-inventory.png)

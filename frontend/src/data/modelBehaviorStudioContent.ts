@@ -3,6 +3,9 @@ import type { SignalTone } from '../components/SignalBadge'
 export type BehaviorProfile = {
   name: string
   status: string
+  stage: 'Baseline' | 'Review' | 'Blocked'
+  lastRun: string
+  sourceSet: string
   prompt: string
   objective: string
   feedbackStatus: string
@@ -23,6 +26,9 @@ export const behaviorProfiles = [
   {
     name: 'Evidence-first',
     status: 'Ready for baseline',
+    stage: 'Baseline',
+    lastRun: '12 eval prompts',
+    sourceSet: 'Clinical diligence pack',
     prompt:
       'Answer the user with direct source grounding first. Name uncertainty clearly, separate supported claims from inferred claims, and ask for missing context before making a high-risk recommendation.',
     objective:
@@ -44,6 +50,13 @@ export const behaviorProfiles = [
         'The answer names direct evidence, labels the inferred operational risk, and asks for missing source context before recommending a final memo claim.',
         true,
       ],
+      [
+        'Too broad',
+        'neutral',
+        'Response C',
+        'The answer adds a helpful diligence frame, but it includes extra recommendations that were not requested by the reviewer.',
+        false,
+      ],
     ],
     evalRows: [
       ['Grounding', 94, 'Claims are separated by evidence quality'],
@@ -60,11 +73,15 @@ export const behaviorProfiles = [
       ['Decision', 'Promote Response B behavior to baseline'],
       ['Risk', 'Watch for answers that bury missing context'],
       ['Next eval', 'Run against three trial-feasibility prompts'],
+      ['Export scope', 'Include prompt v4, response B, rubric scores, and reviewer feedback'],
     ],
   },
   {
     name: 'Concise operator',
     status: 'Needs tone pass',
+    stage: 'Review',
+    lastRun: '8 eval prompts',
+    sourceSet: 'Operator review notes',
     prompt:
       'Give an operator-facing answer that is brief, specific, and action-oriented. Preserve uncertainty, but keep the response scannable for a reviewer deciding what to do next.',
     objective:
@@ -86,6 +103,13 @@ export const behaviorProfiles = [
         'Directionally feasible, but not memo-ready. Verify steroid exclusions, compare screen-failure patterns, and soften the enrollment claim.',
         true,
       ],
+      [
+        'Verbose',
+        'neutral',
+        'Response C',
+        'The answer preserves evidence context, but it reads more like a synthesis than a fast operator note.',
+        false,
+      ],
     ],
     evalRows: [
       ['Grounding', 82, 'Evidence requirements are named'],
@@ -102,11 +126,15 @@ export const behaviorProfiles = [
       ['Decision', 'Keep as a fast-review variant'],
       ['Risk', 'May lose too much evidence context'],
       ['Next eval', 'Test with longer source packets'],
+      ['Export scope', 'Include concise prompt v3, selected candidate, tone score, and caveat notes'],
     ],
   },
   {
     name: 'Research synthesizer',
     status: 'Eval required',
+    stage: 'Blocked',
+    lastRun: '6 eval prompts',
+    sourceSet: 'Research synthesis packet',
     prompt:
       'Synthesize a source packet into a shareable answer. Highlight what is known, what is inferred, what conflicts, and which claims should be blocked until stronger citations are attached.',
     objective:
@@ -128,6 +156,13 @@ export const behaviorProfiles = [
         'The synthesis is less polished, but it blocks the weak claims and asks for the missing source packet before finalizing.',
         true,
       ],
+      [
+        'Unclear',
+        'danger',
+        'Response C',
+        'The answer names missing evidence, but it does not explain which claims should be removed before sharing.',
+        false,
+      ],
     ],
     evalRows: [
       ['Grounding', 68, 'Two claims still need source support'],
@@ -144,6 +179,7 @@ export const behaviorProfiles = [
       ['Decision', 'Do not ship until grounding improves'],
       ['Risk', 'Fluent synthesis can hide weak citations'],
       ['Next eval', 'Add adversarial weak-source examples'],
+      ['Export scope', 'Include blocked claims, weak-citation examples, and next eval set'],
     ],
   },
 ] as const satisfies readonly BehaviorProfile[]

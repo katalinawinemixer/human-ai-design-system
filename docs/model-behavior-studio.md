@@ -9,12 +9,14 @@ The first implementation lives in `frontend/src/sections/ModelBehaviorStudioSect
 It includes:
 
 - Behavior profiles for different response strategies.
-- A prompt playground surface for the active profile.
-- Side-by-side response comparison.
+- Profile filters for baseline, review, and blocked behavior states.
+- An editable prompt playground surface for the active profile.
+- Three-way response comparison.
 - A scoring rubric for grounding, calibration, usefulness, and tone.
 - Prompt history tied to the active behavior profile.
 - Human feedback state for reviewer judgment.
-- A lightweight eval report panel that records the decision, risk, and next eval.
+- An export-style eval report panel that records source set, run count, prompt state, decision, risk, next eval, and export scope.
+- Desktop and mobile README screenshots for the current studio surface.
 
 ## Product Intent
 
@@ -28,9 +30,8 @@ The studio is meant to show model-behavior judgment, not just UI craft. The inte
 
 ## Remaining Phase 2 Work
 
-- Make the prompt playground editable with local state.
-- Add richer behavior-profile metadata and filter states.
-- Expand response comparison beyond two candidates.
-- Add a fuller exportable eval report view.
-- Capture additional desktop and mobile screenshots as the surface matures.
+- Add selectable response winners instead of using fixture-selected winners only.
+- Add prompt version creation when a draft is saved.
+- Add a more realistic report export interaction.
+- Refresh screenshots as the surface matures.
 - Decide whether any backend is needed for saved evals, profiles, or report exports.

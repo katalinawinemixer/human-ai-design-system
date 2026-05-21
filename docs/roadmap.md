@@ -47,18 +47,19 @@ Completed so far:
 
 - First Model Behavior Studio section in the live frontend
 - Behavior profile switcher
-- Prompt playground surface
-- Side-by-side response comparison
+- Profile filters for baseline, review, and blocked states
+- Editable prompt playground surface with save status
+- Three-way response comparison
 - Scoring rubric for grounding, calibration, usefulness, and tone
 - Prompt history tied to the active profile
-- Lightweight eval report panel
+- Export-style eval report panel with source set, run count, prompt state, decision, risk, next eval, and export scope
+- Desktop and mobile README screenshots for the studio surface
 
 Remaining Phase 2 work:
 
-- Make the prompt playground editable with local state.
-- Add richer profile metadata and filtering.
-- Expand comparison to support more candidate responses.
-- Create a fuller exportable eval report view.
+- Add selectable response winners.
+- Create prompt-history entries from saved drafts.
+- Add a more realistic report export interaction.
 - Decide whether saved evals or profile persistence need a backend.
 
 ## Phase 3: TrialSense

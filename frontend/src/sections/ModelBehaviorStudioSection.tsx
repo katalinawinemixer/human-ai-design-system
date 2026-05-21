@@ -4,6 +4,7 @@ import {
   FileDown,
   FlaskConical,
   GitCompareArrows,
+  Save,
   SlidersHorizontal,
 } from 'lucide-react'
 import { ComparisonWorkspace } from '../components/ComparisonWorkspace'
@@ -13,11 +14,31 @@ import { PromptHistory } from '../components/PromptHistory'
 import { SectionHeader } from '../components/SectionHeader'
 import { SignalBadge } from '../components/SignalBadge'
 import { behaviorProfiles } from '../data/modelBehaviorStudioContent'
+import type { BehaviorProfile } from '../data/modelBehaviorStudioContent'
+
+const profileFilters = ['All', 'Baseline', 'Review', 'Blocked'] as const
 
 export function ModelBehaviorStudioSection() {
-  const [activeProfile, setActiveProfile] = useState(0)
+  const [activeProfileName, setActiveProfileName] = useState<string>(
+    behaviorProfiles[0].name,
+  )
+  const [activeFilter, setActiveFilter] =
+    useState<(typeof profileFilters)[number]>('All')
   const [reportStatus, setReportStatus] = useState('Draft report')
-  const profile = behaviorProfiles[activeProfile]
+  const [promptStatus, setPromptStatus] = useState('Saved prompt')
+  const [promptDrafts, setPromptDrafts] = useState<Record<string, string>>(() =>
+    Object.fromEntries(
+      behaviorProfiles.map((profile) => [profile.name, profile.prompt]),
+    ),
+  )
+
+  const filteredProfiles = behaviorProfiles.filter(
+    (profile) => activeFilter === 'All' || profile.stage === activeFilter,
+  )
+  const profile: BehaviorProfile =
+    behaviorProfiles.find((item) => item.name === activeProfileName) ??
+    behaviorProfiles[0]
+  const activePrompt = promptDrafts[profile.name] ?? profile.prompt
 
   return (
     <section className="model-studio-section" id="model-studio">
@@ -33,19 +54,43 @@ export function ModelBehaviorStudioSection() {
             <SlidersHorizontal size={20} />
             <h3>Behavior profiles</h3>
           </div>
-          <div className="profile-list" aria-label="Behavior profiles">
-            {behaviorProfiles.map((item, index) => (
+          <div className="profile-filter" aria-label="Profile filters">
+            {profileFilters.map((filter) => (
               <button
-                className={index === activeProfile ? 'active' : undefined}
+                className={filter === activeFilter ? 'active' : undefined}
+                key={filter}
+                onClick={() => {
+                  setActiveFilter(filter)
+                  const nextProfile =
+                    filter === 'All'
+                      ? behaviorProfiles[0]
+                      : behaviorProfiles.find((item) => item.stage === filter)
+                  if (nextProfile) {
+                    setActiveProfileName(nextProfile.name)
+                    setReportStatus('Draft report')
+                    setPromptStatus('Saved prompt')
+                  }
+                }}
+                type="button"
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+          <div className="profile-list" aria-label="Behavior profiles">
+            {filteredProfiles.map((item) => (
+              <button
+                className={item.name === profile.name ? 'active' : undefined}
                 key={item.name}
                 onClick={() => {
-                  setActiveProfile(index)
+                  setActiveProfileName(item.name)
                   setReportStatus('Draft report')
+                  setPromptStatus('Saved prompt')
                 }}
                 type="button"
               >
                 <span>{item.name}</span>
-                <small>{item.status}</small>
+                <small>{`${item.status} | ${item.lastRun}`}</small>
               </button>
             ))}
           </div>
@@ -57,9 +102,26 @@ export function ModelBehaviorStudioSection() {
             </div>
             <textarea
               aria-label={`${profile.name} behavior prompt`}
-              value={profile.prompt}
-              readOnly
+              value={activePrompt}
+              onChange={(event) => {
+                setPromptDrafts({
+                  ...promptDrafts,
+                  [profile.name]: event.target.value,
+                })
+                setPromptStatus('Unsaved draft')
+                setReportStatus('Draft report')
+              }}
             />
+            <div className="prompt-actions">
+              <span>{promptStatus}</span>
+              <button
+                onClick={() => setPromptStatus('Saved prompt')}
+                type="button"
+              >
+                <Save size={15} />
+                Save
+              </button>
+            </div>
             <p>{profile.objective}</p>
           </div>
         </div>
@@ -67,7 +129,15 @@ export function ModelBehaviorStudioSection() {
         <div className="studio-workspace">
           <div className="studio-workspace-topline">
             <SignalBadge tone="evidence">{profile.name}</SignalBadge>
-            <SignalBadge tone={profile.status === 'Eval required' ? 'warn' : 'good'}>
+            <SignalBadge
+              tone={
+                profile.stage === 'Blocked'
+                  ? 'warn'
+                  : profile.stage === 'Baseline'
+                    ? 'good'
+                    : 'evidence'
+              }
+            >
               {profile.status}
             </SignalBadge>
           </div>
@@ -94,6 +164,11 @@ export function ModelBehaviorStudioSection() {
                 <FileDown size={18} />
                 <strong>Eval report</strong>
               </div>
+              <div className="report-summary">
+                <span>{profile.sourceSet}</span>
+                <span>{profile.lastRun}</span>
+                <span>{promptStatus}</span>
+              </div>
               <div className="report-rows">
                 {profile.reportRows.map(([label, value]) => (
                   <div className="report-row" key={label}>
@@ -104,7 +179,7 @@ export function ModelBehaviorStudioSection() {
               </div>
               <button
                 className="report-button"
-                onClick={() => setReportStatus('Report ready')}
+                onClick={() => setReportStatus('Export ready')}
                 type="button"
               >
                 {reportStatus}
