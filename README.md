@@ -1,82 +1,68 @@
 # Human-AI Design System
 
-A reusable design system for AI-native product interfaces: source-grounded answers, uncertainty states, human feedback, model evaluation, prompt history, and agent activity.
+Human-AI Design System is a portfolio project for AI-native product interfaces: source-grounded answers, uncertainty states, human feedback, model evaluation, prompt history, response comparison, agent activity, and human review.
 
-This project is the first piece in a small portfolio ecosystem aimed at AI product design roles. The goal is to make model behavior visible enough that a user can decide when to trust, challenge, compare, or escalate an AI output.
+It is the first project in a Thinking Machines-style designer portfolio sequence. The goal is to show a live coded prototype, strong visual and interaction craft, model-behavior judgment, and a reusable foundation for future AI product work.
 
-It is intentionally coded as a live React prototype rather than a static mockup. The system is meant to demonstrate product taste, design-system thinking, and comfort designing around model behavior, evaluation, feedback, and uncertainty.
+## Project Structure
 
-## Why this exists
+```text
+frontend/   React, TypeScript, and Vite design-system prototype
+backend/    Reserved for future APIs, eval data, and model-behavior services
+docs/       Case-study notes and portfolio documentation
+```
 
-Many AI demos make the model feel magical, but hide the actual product decisions: what evidence was used, which claims are inferred, how confidence is calibrated, and how humans can improve the system. This design system turns those decisions into reusable interface primitives.
+## What It Shows
 
-## Portfolio thesis
+- A polished AI product surface built in code.
+- Interface primitives for evidence, uncertainty, feedback, evals, and review.
+- A reusable system that can support multiple AI product concepts.
+- Clinical-trial diligence examples that connect the design work to real operator judgment.
 
-The project is designed to support a Thinking Machines-style designer portfolio: polished AI interface craft, coded prototypes, model-behavior judgment, and a clear domain point of view.
+## Portfolio Sequence
 
-What this prototype is meant to prove:
+This repo is the foundation for two planned follow-on projects:
 
-- I can design and ship a working AI product surface in code.
-- I can turn model behavior concerns into visible interface states.
-- I can think in reusable systems, not one-off screens.
-- I can connect AI product design to clinical-trial diligence and operational risk.
+- **Model Behavior Studio**: a workspace for comparing, scoring, and tuning AI response behavior.
+- **TrialSense**: a clinical-trial diligence workbench for source-grounded review of trial design, feasibility, and operational risk.
 
-## Included components
+## Run Locally
 
-- Source citation cards
-- Confidence meter
-- Human feedback controls
-- Agent activity timeline
-- Evaluation scorecard
-- Prompt history panel
-- Response comparison workspace
-- Human review banner
+Start the frontend app:
 
-## Built for reuse
+```bash
+cd frontend
+bun install
+bun dev
+```
 
-The components are intentionally shaped for two follow-on projects:
+The frontend usually runs at:
 
-- **Model Behavior Studio**: a tool for comparing, scoring, and tuning AI response behavior.
-- **TrialSense**: an AI clinical-trial diligence workbench for source-grounded review of trial design, feasibility, and risk.
+```text
+http://localhost:5173
+```
 
-## Design decisions
+If that port is busy, Vite will choose the next available local port.
 
-- **Trust is treated as a workflow**: evidence, confidence, and review state appear where decisions are being made.
-- **Model behavior is inspectable**: prompt versions, response comparisons, eval scores, and feedback controls make AI behavior easier to discuss with product and research teams.
-- **Clinical examples stay grounded**: sample content uses trial feasibility and eligibility risk so the interface has a real domain point of view.
-- **The system can move into product work**: the same primitives can support model evaluation workflows and clinical diligence workflows.
+## Verification
 
-## Design principles
+From the frontend folder:
 
-- **Behavior is part of the interface**: prompts, outputs, rubrics, and feedback states should be designed surfaces.
-- **Confidence is not decoration**: uncertainty should appear next to the decision it affects.
-- **Evaluation stays visible**: scorecards and review states make quality measurable while a prototype is still evolving.
+```bash
+cd frontend
+bun run lint
+bun run build
+```
 
-## Tech stack
+## Tech Stack
 
 - React
 - TypeScript
 - Vite
 - Bun
 - lucide-react
+- Plain CSS with CSS variables
 
-## Run locally
+## Status
 
-```bash
-bun install
-bun dev
-```
-
-## Verification
-
-```bash
-bun run lint
-bun run build
-```
-
-## Next iterations
-
-- Split the primitives into reusable component files.
-- Add screenshots and a short case-study writeup for the GitHub repo.
-- Use the component system inside Model Behavior Studio.
-- Use the clinical-trial patterns inside TrialSense.
+The current repo contains a working frontend prototype and documentation. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
