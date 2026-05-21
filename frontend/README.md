@@ -26,6 +26,17 @@ System intent        Design principles around trust, confidence, and evaluation
 Component library    Reusable AI-native interface patterns
 ```
 
+## Source Structure
+
+```text
+src/App.tsx                 Page composition
+src/components/             Reusable UI primitives
+src/sections/               Full-page content sections
+src/data/                   Static design-system content and examples
+src/App.css                 App-specific layout and component styles
+src/index.css               Global tokens, typography, and reset styles
+```
+
 ## Included Components
 
 ```text
