@@ -459,6 +459,7 @@ main {
 
 .spec-card {
   display: grid;
+  align-self: start;
   gap: 14px;
   min-height: 270px;
   padding: 16px;
@@ -1008,6 +1009,7 @@ main {
 .trial-panel {
   display: grid;
   align-content: start;
+  align-self: start;
   gap: 16px;
   padding: 16px;
 }
