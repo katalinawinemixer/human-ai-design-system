@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { AgentTimeline } from '../components/AgentTimeline'
 import { CitationCard } from '../components/CitationCard'
 import { ComparisonWorkspace } from '../components/ComparisonWorkspace'
@@ -9,6 +10,7 @@ import { PromptHistory } from '../components/PromptHistory'
 import { ReviewBanner } from '../components/ReviewBanner'
 import { SectionHeader } from '../components/SectionHeader'
 import { SignalBadge } from '../components/SignalBadge'
+import { TrialSenseSection } from '../sections/TrialSenseSection'
 
 describe('SignalBadge', () => {
   it('renders children', () => {
@@ -198,5 +200,44 @@ describe('PromptHistory', () => {
     const historyItems = container.querySelectorAll('.history-item')
     expect(historyItems[0]).toHaveClass('current')
     expect(historyItems[1]).not.toHaveClass('current')
+  })
+})
+
+describe('TrialSenseSection', () => {
+  it('renders the section header eyebrow', () => {
+    render(<TrialSenseSection />)
+    expect(screen.getByText('Phase 3')).toBeInTheDocument()
+  })
+
+  it('renders the first trial case by default', () => {
+    render(<TrialSenseSection />)
+    expect(screen.getByText('Dose expansion feasibility')).toBeInTheDocument()
+  })
+
+  it('switches to the second case when its button is clicked', async () => {
+    const user = userEvent.setup()
+    render(<TrialSenseSection />)
+    const caseButton = screen.getByRole('button', { name: /First-in-human startup risk/ })
+    await user.click(caseButton)
+    expect(caseButton).toHaveClass('active')
+  })
+
+  it('marks a question as answered when clicked', async () => {
+    const user = userEvent.setup()
+    render(<TrialSenseSection />)
+    const question = screen.getByRole('button', {
+      name: /What screen-failure rate did comparable trials see/,
+    })
+    expect(question).toHaveAttribute('aria-pressed', 'false')
+    await user.click(question)
+    expect(question).toHaveAttribute('aria-pressed', 'true')
+  })
+
+  it('shows the download link only after finalising the summary', async () => {
+    const user = userEvent.setup()
+    render(<TrialSenseSection />)
+    expect(screen.queryByText('Download .txt')).not.toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Draft summary' }))
+    expect(screen.getByText('Download .txt')).toBeInTheDocument()
   })
 })

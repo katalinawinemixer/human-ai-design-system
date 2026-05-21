@@ -763,7 +763,8 @@ main {
   background: var(--teal-soft);
 }
 
-.profile-list button {
+.profile-list button,
+.trial-case-list button {
   display: grid;
   gap: 4px;
   width: 100%;
@@ -775,19 +776,22 @@ main {
   background: #fbfaf6;
 }
 
-.profile-list button.active {
+.profile-list button.active,
+.trial-case-list button.active {
   border-color: rgba(9, 124, 119, 0.42);
   color: var(--ink);
   background: var(--teal-soft);
 }
 
-.profile-list span {
+.profile-list span,
+.trial-case-list span {
   color: var(--ink);
   font-size: 14px;
   font-weight: 800;
 }
 
-.profile-list small {
+.profile-list small,
+.trial-case-list small {
   font-size: 12px;
   font-weight: 700;
 }
@@ -811,9 +815,8 @@ main {
   font-size: 14px;
 }
 
-.prompt-playground textarea {
-  width: 100%;
-  min-height: 210px;
+.prompt-playground textarea,
+.trial-intake-panel textarea {
   resize: vertical;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -822,6 +825,11 @@ main {
   background: #fbfaf6;
   font: inherit;
   font-size: 14px;
+}
+
+.prompt-playground textarea {
+  width: 100%;
+  min-height: 210px;
 }
 
 .prompt-playground p {
@@ -848,6 +856,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  width: max-content;
   border: 1px solid rgba(9, 124, 119, 0.38);
   border-radius: var(--radius);
   padding: 8px 10px;
@@ -862,7 +871,8 @@ main {
   gap: 16px;
 }
 
-.studio-workspace-topline {
+.studio-workspace-topline,
+.trialsense-topline {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -970,10 +980,6 @@ main {
   font-size: 13px;
 }
 
-.download-link {
-  width: max-content;
-}
-
 .trialsense-shell {
   display: grid;
   grid-template-columns: minmax(270px, 0.32fr) minmax(0, 1fr);
@@ -1002,56 +1008,13 @@ main {
   gap: 10px;
 }
 
-.trial-case-list button {
-  display: grid;
-  gap: 4px;
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 12px;
-  color: var(--muted);
-  background: #fbfaf6;
-  text-align: left;
-}
-
-.trial-case-list button.active {
-  border-color: rgba(9, 124, 119, 0.42);
-  color: var(--ink);
-  background: var(--teal-soft);
-}
-
-.trial-case-list span {
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.trial-case-list small {
-  font-size: 12px;
-  font-weight: 700;
-}
-
 .trial-intake-panel textarea {
   min-height: 260px;
-  resize: vertical;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 12px;
-  color: var(--ink);
-  background: #fbfaf6;
-  font: inherit;
-  font-size: 14px;
 }
 
 .trialsense-workspace {
   display: grid;
   gap: 16px;
-}
-
-.trialsense-topline {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
 }
 
 .trial-review-grid,
@@ -1555,11 +1518,7 @@ main {
     flex-direction: column;
   }
 
-  .studio-workspace-topline {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
+  .studio-workspace-topline,
   .trialsense-topline {
     align-items: flex-start;
     flex-direction: column;
