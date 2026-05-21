@@ -20,10 +20,11 @@ Current scope:
 - Human review banner
 - Component specification section with jobs, states, and reuse paths
 - Visual inventory section for component state examples
+- README showcase with screenshots from the live prototype
 
 Next improvements:
 
-- Add screenshots and a short demo GIF.
+- Add a short demo GIF.
 - Add sample scenarios beyond clinical-trial diligence.
 - Expand the data layer so examples are easier to swap across use cases.
 

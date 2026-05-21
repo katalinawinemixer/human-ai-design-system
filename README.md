@@ -12,6 +12,20 @@ https://katalinawinemixer.github.io/human-ai-design-system/
 
 The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
+## Showcase
+
+### Prototype surface
+
+![Human-AI Design System hero interface](docs/assets/screenshots/hero.png)
+
+### System specs
+
+![Component specs with jobs, states, and reuse paths](docs/assets/screenshots/system-specs.png)
+
+### Visual inventory
+
+![Visual inventory of component states](docs/assets/screenshots/visual-inventory.png)
+
 ## Project Structure
 
 ```text
@@ -20,6 +34,21 @@ backend/    Reserved for future APIs, eval data, and model-behavior services
 docs/       Case-study notes and portfolio documentation
 .github/    CI and GitHub Pages deployment workflows
 ```
+
+## Why This Matters
+
+AI product interfaces need more than an answer box. They need visible evidence, calibrated uncertainty, human correction loops, model evaluation, and clear review gates so people can understand when to trust, question, or stop an output.
+
+This project turns those trust decisions into reusable coded components. The same primitives can support a model-behavior workspace, a clinical-trial diligence workflow, or any AI product where source grounding and human judgment matter.
+
+## What I Built
+
+- A live React and TypeScript prototype for AI-native product surfaces.
+- Reusable components for evidence, uncertainty, feedback, evals, prompt history, response comparison, agent progress, and human review.
+- A system-specs section that defines component jobs, state models, and reuse paths.
+- A visual inventory that shows component states before they are reused in larger product screens.
+- Organized documentation for the case study, roadmap, and component specifications.
+- CI and GitHub Pages deployment so the project is reviewable as a public working artifact.
 
 ## What It Shows
 
