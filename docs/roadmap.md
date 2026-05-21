@@ -22,12 +22,16 @@ Current scope:
 - Visual inventory section for component state examples
 - README showcase with screenshots from the live prototype
 - Scenario library with clinical diligence, model-behavior review, and research synthesis examples
+- Interactive hero scenario switcher
+- Component API reference
+- Usage notes for each primitive
+- Short README demo GIF
 
 Next improvements:
 
-- Add a short demo GIF.
-- Add a compact scenario-switching interaction to the hero prototype.
 - Expand scenario examples into a reusable fixture structure for follow-on projects.
+- Add accessibility notes for keyboard behavior, labels, and contrast.
+- Add mobile screenshots to the README.
 
 ## Phase 2: Model Behavior Studio
 

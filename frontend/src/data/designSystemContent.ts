@@ -80,6 +80,15 @@ export const scenarioLibrary = [
     evidence:
       'Eligibility criteria are sourced, but enrollment feasibility still depends on comparable studies.',
     review: 'Human review required',
+    actionLabel: 'Review',
+    secondarySignal: '2 inferred claims',
+    feedback: 'Reviewer flagged inferred feasibility assumption',
+    feedbackState: 'speculative',
+    activity: [
+      ['Reading source set', 'Complete', 'done'],
+      ['Checking missing context', '3 open questions', 'active'],
+      ['Drafting review note', 'Waiting for approval', 'waiting'],
+    ],
     primitives: [
       'Citation cards',
       'Confidence meter',
@@ -101,6 +110,15 @@ export const scenarioLibrary = [
     evidence:
       'One response is more useful, but the evaluator flags tone and evidence discipline for review.',
     review: 'Review recommended',
+    actionLabel: 'Compare',
+    secondarySignal: 'Tone drift found',
+    feedback: 'Preferred answer captured for behavior tuning',
+    feedbackState: 'useful',
+    activity: [
+      ['Running eval rubric', 'Complete', 'done'],
+      ['Comparing responses', '2 candidates', 'active'],
+      ['Saving behavior note', 'Queued', 'waiting'],
+    ],
     primitives: [
       'Response comparison',
       'Eval scorecard',
@@ -122,6 +140,15 @@ export const scenarioLibrary = [
     evidence:
       'The system found useful source material, but two assertions require stronger citations.',
     review: 'Source check needed',
+    actionLabel: 'Check',
+    secondarySignal: '2 weak citations',
+    feedback: 'Reviewer requested stronger source support',
+    feedbackState: 'speculative',
+    activity: [
+      ['Reading source packet', 'Complete', 'done'],
+      ['Checking citation quality', 'Needs source', 'error'],
+      ['Preparing synthesis', 'Paused', 'waiting'],
+    ],
     primitives: [
       'Citation cards',
       'Eval scorecard',

@@ -14,6 +14,10 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ## Showcase
 
+### Demo
+
+![Short demo of the Human-AI Design System](docs/assets/demo/human-ai-design-system-demo.gif)
+
 ### Prototype surface
 
 ![Human-AI Design System hero interface](docs/assets/screenshots/hero.png)
@@ -50,6 +54,7 @@ This project turns those trust decisions into reusable coded components. The sam
 - A live React and TypeScript prototype for AI-native product surfaces.
 - Reusable components for evidence, uncertainty, feedback, evals, prompt history, response comparison, agent progress, and human review.
 - A scenario library showing how the same primitives adapt across clinical diligence, model-behavior review, and research synthesis.
+- An interactive hero scenario switcher that previews the system in multiple workflow contexts.
 - A system-specs section that defines component jobs, state models, and reuse paths.
 - A visual inventory that shows component states before they are reused in larger product screens.
 - Organized documentation for the case study, roadmap, and component specifications.
@@ -118,5 +123,7 @@ The current repo contains a working frontend prototype, project documentation, C
 ## Documentation
 
 - `docs/case-study.md`: portfolio case-study draft
+- `docs/component-api.md`: current component props and usage surface
 - `docs/component-specs.md`: component jobs, states, and reuse paths
 - `docs/roadmap.md`: project sequence, future phases, and repository organization rules
+- `docs/usage-notes.md`: when to use each AI-interface primitive

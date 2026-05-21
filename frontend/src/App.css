@@ -116,6 +116,29 @@ main {
   margin-top: 32px;
 }
 
+.scenario-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.scenario-switcher button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 10px;
+  color: var(--muted);
+  background: rgba(255, 253, 248, 0.72);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.scenario-switcher button.active {
+  border-color: rgba(9, 124, 119, 0.42);
+  color: var(--teal);
+  background: var(--teal-soft);
+}
+
 .primary-action,
 .secondary-action {
   min-height: 42px;

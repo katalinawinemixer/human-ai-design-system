@@ -1,11 +1,16 @@
+import { useState } from 'react'
 import { ArrowRight, ChevronRight, Sparkles } from 'lucide-react'
 import { AgentTimeline } from '../components/AgentTimeline'
 import { ConfidenceMeter } from '../components/ConfidenceMeter'
 import { FeedbackBar } from '../components/FeedbackBar'
 import { ReviewBanner } from '../components/ReviewBanner'
 import { SignalBadge } from '../components/SignalBadge'
+import { scenarioLibrary } from '../data/designSystemContent'
 
 export function HeroSection() {
+  const [activeScenario, setActiveScenario] = useState(0)
+  const scenario = scenarioLibrary[activeScenario]
+
   return (
     <header className="hero-section">
       <nav className="topbar" aria-label="Project">
@@ -51,19 +56,42 @@ export function HeroSection() {
               Portfolio story
             </a>
           </div>
+          <div className="scenario-switcher" aria-label="Preview scenario">
+            {scenarioLibrary.map((item, index) => (
+              <button
+                className={index === activeScenario ? 'active' : undefined}
+                key={item.title}
+                onClick={() => setActiveScenario(index)}
+                type="button"
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="hero-surface" aria-label="AI review workspace preview">
           <div className="surface-toolbar">
-            <SignalBadge tone="evidence">Grounded answer</SignalBadge>
-            <SignalBadge tone="warn">2 inferred claims</SignalBadge>
+            <SignalBadge tone="evidence">{scenario.title}</SignalBadge>
+            <SignalBadge tone="warn">{scenario.secondarySignal}</SignalBadge>
           </div>
-          <ReviewBanner />
+          <ReviewBanner
+            actionLabel={scenario.actionLabel}
+            body={scenario.context}
+            title={scenario.review}
+          />
           <div className="surface-grid">
-            <ConfidenceMeter />
-            <AgentTimeline />
+            <ConfidenceMeter
+              description={scenario.evidence}
+              label={scenario.confidence}
+              value={scenario.confidenceValue}
+            />
+            <AgentTimeline entries={scenario.activity} />
           </div>
-          <FeedbackBar />
+          <FeedbackBar
+            selected={scenario.feedbackState}
+            status={scenario.feedback}
+          />
         </div>
       </div>
     </header>
