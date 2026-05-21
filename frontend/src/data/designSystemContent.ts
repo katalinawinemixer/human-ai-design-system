@@ -13,7 +13,7 @@ export const citations = [
     quote:
       'Comparable studies enrolled between 3.1 and 4.4 patients per site per month.',
     confidence: 'Medium',
-    tone: 'caution',
+    tone: 'warn',
   },
 ] as const
 
@@ -142,14 +142,14 @@ export const inventoryCitationStates = [
     source: 'Comparable trial enrollment patterns',
     quote: 'Screen-failure risk is inferred from analogous study criteria.',
     confidence: 'Medium',
-    tone: 'caution',
+    tone: 'warn',
   },
   {
     title: 'Missing source requirement',
     source: 'Source not attached',
     quote: 'The claim should not be used until a supporting document is linked.',
     confidence: 'Low',
-    tone: 'caution',
+    tone: 'warn',
   },
 ] as const
 
@@ -297,5 +297,5 @@ export type Citation = {
   source: string
   quote: string
   confidence: string
-  tone: 'evidence' | 'caution'
+  tone: 'evidence' | 'warn'
 }

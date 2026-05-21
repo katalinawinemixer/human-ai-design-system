@@ -69,8 +69,8 @@ export function InventorySection() {
             badge="Agent work"
           />
           <div className="inventory-stack">
-            {inventoryTimelineStates.map((entries, index) => (
-              <AgentTimeline entries={entries} key={index} />
+            {inventoryTimelineStates.map((entries) => (
+              <AgentTimeline entries={entries} key={entries[0][0]} />
             ))}
           </div>
         </article>
@@ -98,8 +98,8 @@ export function InventorySection() {
             badge="Quality"
           />
           <div className="inventory-stack">
-            {inventoryEvalStates.map((rows, index) => (
-              <EvalScorecard key={index} rows={rows} />
+            {inventoryEvalStates.map((rows) => (
+              <EvalScorecard key={rows[0][0]} rows={rows} />
             ))}
           </div>
         </article>
@@ -111,8 +111,8 @@ export function InventorySection() {
             badge="Iteration"
           />
           <div className="inventory-stack">
-            {inventoryPromptStates.map((items, index) => (
-              <PromptHistory items={items} key={index} />
+            {inventoryPromptStates.map((items) => (
+              <PromptHistory items={items} key={items[0][0]} />
             ))}
           </div>
         </article>
@@ -124,8 +124,8 @@ export function InventorySection() {
             badge="Choice"
           />
           <div className="inventory-stack">
-            {inventoryComparisonStates.map((responses, index) => (
-              <ComparisonWorkspace key={index} responses={responses} />
+            {inventoryComparisonStates.map((responses) => (
+              <ComparisonWorkspace key={responses[0][2]} responses={responses} />
             ))}
           </div>
         </article>

@@ -5,7 +5,7 @@ export function CitationCard({ citation }: { citation: Citation }) {
   return (
     <article className="citation-card">
       <div className="citation-topline">
-        <SignalBadge tone={citation.tone === 'evidence' ? 'evidence' : 'warn'}>
+        <SignalBadge tone={citation.tone}>
           {citation.confidence} confidence
         </SignalBadge>
         <span>{citation.source}</span>

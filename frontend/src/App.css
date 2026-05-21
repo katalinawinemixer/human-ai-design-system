@@ -370,6 +370,11 @@ main {
   background: var(--teal-soft);
 }
 
+.timeline-waiting .timeline-dot {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+
 .timeline-error .timeline-dot {
   border-color: var(--red);
   background: var(--red-soft);
