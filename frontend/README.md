@@ -31,6 +31,8 @@ The workflow builds this app with a GitHub Pages base path:
 /human-ai-design-system/
 ```
 
+The built files are published to the repository's `gh-pages` branch.
+
 ## Current Sections
 
 ```text
