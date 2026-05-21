@@ -18,13 +18,14 @@ Current scope:
 - Prompt history panel
 - Response comparison workspace
 - Human review banner
+- Component specification section with jobs, states, and reuse paths
 
 Next improvements:
 
 - Add screenshots and a short demo GIF.
 - Add a visual inventory page for every component state.
 - Add sample scenarios beyond clinical-trial diligence.
-- Add a small data layer so examples are easier to swap.
+- Expand the data layer so examples are easier to swap across use cases.
 
 ## Phase 2: Model Behavior Studio
 
@@ -77,3 +78,4 @@ Potential features:
 - Add new UI primitives under `frontend/src/components/`.
 - Add page-level sections under `frontend/src/sections/`.
 - Add static content and examples under `frontend/src/data/`.
+- Keep component rationale and state models in `docs/component-specs.md`.

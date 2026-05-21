@@ -5,6 +5,7 @@ main {
 .hero-section,
 .case-study-section,
 .principles-section,
+.specifications-section,
 .components-section {
   padding: 28px clamp(20px, 4vw, 56px);
 }
@@ -338,6 +339,7 @@ main {
 
 .principles-section,
 .case-study-section,
+.specifications-section,
 .components-section {
   border-top: 1px solid var(--line);
   background: rgba(255, 253, 248, 0.42);
@@ -381,6 +383,114 @@ main {
 
 .principles-grid p {
   margin-top: 8px;
+}
+
+.spec-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.34fr);
+  align-items: start;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.spec-card,
+.review-checklist {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.spec-card {
+  display: grid;
+  gap: 14px;
+  min-height: 270px;
+  padding: 16px;
+}
+
+.spec-card-topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--teal);
+}
+
+.spec-card h3,
+.review-checklist h3 {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.spec-card > p,
+.spec-reuse p,
+.checklist-row p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.spec-states {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.spec-states span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: var(--ink);
+  background: #fbfaf6;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.spec-reuse {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.spec-reuse span {
+  color: var(--subtle);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.review-checklist {
+  position: sticky;
+  top: 18px;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+.checklist-rows {
+  display: grid;
+  gap: 14px;
+}
+
+.checklist-row {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+
+.checklist-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.checklist-row strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.checklist-row p {
+  margin-top: 5px;
 }
 
 .case-study-grid {
@@ -630,11 +740,13 @@ main {
   .hero-grid,
   .surface-grid,
   .case-study-grid,
+  .spec-layout,
   .principles-grid {
     grid-template-columns: 1fr;
   }
 
   .reuse-grid,
+  .spec-grid,
   .component-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -662,9 +774,14 @@ main {
 
   .hero-grid,
   .reuse-grid,
+  .spec-grid,
   .component-grid,
   .comparison {
     grid-template-columns: 1fr;
+  }
+
+  .review-checklist {
+    position: static;
   }
 
   .component-specimen.wide {

@@ -69,4 +69,62 @@ export const reuseMap = [
   ],
 ] as const
 
+export const componentSpecs = [
+  {
+    name: 'Source citation card',
+    role: 'Keeps each meaningful claim attached to source context, confidence, and evidence tone.',
+    states: ['Supported', 'Inferred', 'Needs source'],
+    reuse: 'TrialSense claim review, investor memo evidence trails, answer provenance.',
+  },
+  {
+    name: 'Confidence meter',
+    role: 'Explains what the system knows, where it is extrapolating, and why the answer should be trusted cautiously.',
+    states: ['High', 'Moderate', 'Low', 'Blocked'],
+    reuse: 'Clinical feasibility scoring, model response calibration, risk review.',
+  },
+  {
+    name: 'Human feedback control',
+    role: 'Captures user judgment as structured signal instead of leaving feedback as a generic thumbs-up event.',
+    states: ['Useful', 'Speculative', 'Unhelpful'],
+    reuse: 'Behavior tuning loops, eval dataset collection, reviewer triage.',
+  },
+  {
+    name: 'Agent activity timeline',
+    role: 'Shows the system work in progress so users can inspect what has been read, checked, or deferred.',
+    states: ['Complete', 'Active', 'Waiting', 'Error'],
+    reuse: 'Research agents, diligence workflows, source ingestion status.',
+  },
+  {
+    name: 'Eval scorecard',
+    role: 'Makes model quality legible through rubrics that product, research, and domain experts can discuss.',
+    states: ['Passing', 'Needs attention', 'Regression'],
+    reuse: 'Model Behavior Studio scoring, prompt iteration reviews, release checks.',
+  },
+  {
+    name: 'Human review banner',
+    role: 'Interrupts the workflow only when the cost of unchecked AI output is high enough to justify intervention.',
+    states: ['Required', 'Recommended', 'Approved'],
+    reuse: 'Memo approval, clinical-claim validation, high-risk output gates.',
+  },
+] as const
+
+export const reviewChecklist = [
+  [
+    'Evidence',
+    'Can the user see which source supports the claim and whether the claim is direct or inferred?',
+  ],
+  [
+    'Calibration',
+    'Does the interface explain confidence in plain language instead of hiding behind a score?',
+  ],
+  [
+    'Control',
+    'Can a human approve, challenge, or correct the model at the point where judgment matters?',
+  ],
+  [
+    'Reuse',
+    'Can the pattern move into Model Behavior Studio or TrialSense without being redesigned from scratch?',
+  ],
+] as const
+
 export type Citation = (typeof citations)[number]

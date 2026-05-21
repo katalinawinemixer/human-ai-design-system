@@ -25,6 +25,7 @@ docs/       Case-study notes and portfolio documentation
 
 - A polished AI product surface built in code.
 - Interface primitives for evidence, uncertainty, feedback, evals, and review.
+- Component specifications with state models and reuse paths.
 - A reusable system that can support multiple AI product concepts.
 - Clinical-trial diligence examples that connect the design work to real operator judgment.
 
@@ -81,4 +82,5 @@ The current repo contains a working frontend prototype, project documentation, C
 ## Documentation
 
 - `docs/case-study.md`: portfolio case-study draft
+- `docs/component-specs.md`: component jobs, states, and reuse paths
 - `docs/roadmap.md`: project sequence, future phases, and repository organization rules

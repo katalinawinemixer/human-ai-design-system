@@ -35,6 +35,7 @@ The current app includes:
 - Prompt history panel
 - Response comparison workspace
 - Human review banner
+- Component specification section with jobs, states, and reuse paths
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
@@ -44,12 +45,13 @@ The example content uses clinical-trial diligence scenarios because they connect
 - Design-system thinking for AI-specific interface needs
 - Product judgment around trust, confidence, and review
 - Model-behavior thinking beyond generic chatbot UI
+- Organized documentation that turns UI ideas into reusable product rules
 - A domain-specific point of view grounded in clinical-trial operations
 
 ## Next Iterations
 
 - Split each primitive into reusable component files.
 - Add screenshots and a demo GIF.
-- Add an example data layer so the components can render different AI review scenarios.
+- Expand the example data layer so the components can render different AI review scenarios.
 - Use the primitives in Model Behavior Studio.
 - Adapt the clinical-trial patterns for TrialSense.
