@@ -2,7 +2,7 @@
 
 Human-AI Design System is a portfolio project for AI-native product interfaces: source-grounded answers, uncertainty states, human feedback, model evaluation, prompt history, response comparison, agent activity, and human review.
 
-It is the first project in a Thinking Machines-style designer portfolio sequence. The goal is to show a live coded prototype, strong visual and interaction craft, model-behavior judgment, and a reusable foundation for future AI product work.
+It is the first project in a designer portfolio sequence. The goal is to show a live coded prototype, strong visual and interaction craft, model-behavior judgment, and a reusable foundation for future AI product work.
 
 ## Live Demo
 
