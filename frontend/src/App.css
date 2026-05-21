@@ -1134,6 +1134,33 @@ main {
   background: var(--green);
 }
 
+.source-packet-list {
+  display: grid;
+  gap: 10px;
+}
+
+.source-packet-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: #fbfaf6;
+}
+
+.source-packet-row strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.source-packet-row p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .summary-rows {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1154,6 +1181,13 @@ main {
 
 .summary-row p {
   margin-top: 6px;
+}
+
+.summary-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .case-study-grid {

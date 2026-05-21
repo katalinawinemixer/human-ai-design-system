@@ -12,9 +12,11 @@ It includes:
 - Eligibility, feasibility, operations, startup, monitoring, and evidence risk flags.
 - Confidence scoring tied to source completeness.
 - Agent activity timeline for the diligence review flow.
+- Fuller source packet view for attached, partial, and missing diligence inputs.
 - Evidence trail using source citation cards.
 - Missing-context questions with reviewer checkoff state.
 - Investor diligence summary with feasibility, eligibility, and investor note rows.
+- Downloadable `.txt` diligence summary output for the active trial case.
 - Human review gate for claims that should not move into memo language yet.
 
 ## Product Intent
@@ -29,13 +31,11 @@ TrialSense is meant to show domain-specific AI product judgment. The interface m
 
 ## Current Backend Decision
 
-No backend is needed for the first TrialSense portfolio baseline. Static fixtures are enough to demonstrate the diligence workflow, state model, and reuse of the Phase 1 primitives.
+No backend is needed for the current TrialSense portfolio baseline. Static fixtures, local UI state, and a downloadable text artifact are enough to demonstrate the diligence workflow, state model, and reuse of the Phase 1 primitives.
 
 The reserved `backend/` folder should remain available for future trial document upload, source parsing, saved diligence reviews, or model-provider integration.
 
-## Next Phase 3 Work
+## Future Phase 3 Polish
 
-- Add downloadable diligence summary output.
-- Add a fuller trial source packet view.
-- Add mobile README screenshot once the surface settles.
+- Refresh screenshots when TrialSense changes.
 - Add persistence only if saved review history becomes part of the product story.

@@ -66,7 +66,7 @@ Future Phase 2 polish:
 
 ## Phase 3: TrialSense
 
-Status: in progress
+Status: complete
 
 Goal: create a clinical-trial diligence workbench grounded in source evidence and operational risk.
 
@@ -86,13 +86,15 @@ Completed so far:
 - Investor-style diligence summary
 - Evidence trail with source citations
 - Human review gate for unsupported feasibility claims
+- Fuller trial source packet view
+- Downloadable `.txt` diligence summary output
+- Mobile README screenshot
+- Backend decision: no backend required for this portfolio baseline
 
-Remaining Phase 3 work:
+Future Phase 3 polish:
 
-- Add downloadable diligence summary output.
-- Add a fuller trial source packet view.
-- Add mobile README screenshot once the surface settles.
-- Decide whether saved review history needs backend persistence.
+- Refresh screenshots when TrialSense changes.
+- Add persistence only if saved review history becomes important enough to justify backend scope.
 
 ## Repository Rules
 

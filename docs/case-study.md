@@ -45,7 +45,7 @@ The example content uses clinical-trial diligence scenarios because they connect
 
 The Phase 2 Model Behavior Studio turns the component system into a product workflow. It shows how a reviewer can edit a behavior prompt, save a prompt version, compare candidate responses, choose the winning behavior, score the output, and generate a downloadable eval report. This demonstrates model-behavior judgment as an interface problem: the product is not only displaying AI output, it is helping a human decide which behavior should be trusted, tuned, or blocked.
 
-The Phase 3 TrialSense baseline applies the same primitives to clinical-trial diligence. It translates protocol intake into feasibility risk, eligibility pressure, missing-context questions, source-backed evidence, and investor-readable summary language.
+The Phase 3 TrialSense baseline applies the same primitives to clinical-trial diligence. It translates protocol intake into feasibility risk, eligibility pressure, missing-context questions, source-backed evidence, source packet completeness, downloadable diligence output, and investor-readable summary language.
 
 ## What This Demonstrates
 
@@ -60,6 +60,5 @@ The Phase 3 TrialSense baseline applies the same primitives to clinical-trial di
 
 ## Next Iterations
 
-- Expand TrialSense with downloadable diligence output.
-- Add a fuller source packet view for clinical-trial review.
-- Decide whether saved TrialSense review history needs backend persistence.
+- Refresh screenshots when product surfaces change.
+- Add persistence only if saved TrialSense review history becomes part of the product story.

@@ -15,6 +15,7 @@ export type TrialSenseCase = {
   citations: readonly Citation[]
   riskFlags: readonly (readonly [string, string, string, 'warn' | 'danger' | 'evidence'])[]
   questions: readonly string[]
+  sourcePacket: readonly (readonly [string, string, string, 'evidence' | 'warn'])[]
   summaryRows: readonly (readonly [string, string])[]
 }
 
@@ -81,6 +82,26 @@ export const trialSenseCases = [
       'What screen-failure rate did comparable trials see for steroid exclusions?',
       'Which sites are assumed to carry most enrollment volume?',
       'Are CNS metastasis exclusions aligned with the target population?',
+    ],
+    sourcePacket: [
+      [
+        'Protocol synopsis',
+        'Attached',
+        'Eligibility and exclusion criteria are available for claim review.',
+        'evidence',
+      ],
+      [
+        'Feasibility model',
+        'Partial',
+        'Enrollment assumptions are present, but supporting screen logs are missing.',
+        'warn',
+      ],
+      [
+        'Site list',
+        'Missing',
+        'The workbench cannot validate whether enrollment depends on a few high-volume sites.',
+        'warn',
+      ],
     ],
     summaryRows: [
       [
@@ -159,6 +180,26 @@ export const trialSenseCases = [
       'What IRB timing did comparable first-in-human trials experience?',
       'Will a safety committee review be required before escalation?',
       'Which sites can support inpatient observation for early cohorts?',
+    ],
+    sourcePacket: [
+      [
+        'Draft protocol',
+        'Attached',
+        'Sentinel dosing and inpatient monitoring requirements are available.',
+        'evidence',
+      ],
+      [
+        'Startup timeline',
+        'Partial',
+        'Rapid IRB timing is assumed without comparable precedent.',
+        'warn',
+      ],
+      [
+        'Safety governance history',
+        'Missing',
+        'Escalation review expectations need source support before memo use.',
+        'warn',
+      ],
     ],
     summaryRows: [
       [

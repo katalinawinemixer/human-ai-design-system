@@ -2,8 +2,10 @@ import { useState } from 'react'
 import {
   AlertTriangle,
   ClipboardList,
+  Download,
   FileText,
   HelpCircle,
+  LibraryBig,
   Stethoscope,
 } from 'lucide-react'
 import { AgentTimeline } from '../components/AgentTimeline'
@@ -17,7 +19,41 @@ import { trialSenseCases } from '../data/trialSenseContent'
 export function TrialSenseSection() {
   const [activeCaseIndex, setActiveCaseIndex] = useState(0)
   const [answeredQuestions, setAnsweredQuestions] = useState<string[]>([])
+  const [summaryStatus, setSummaryStatus] = useState('Draft summary')
   const activeCase = trialSenseCases[activeCaseIndex]
+  const summaryText = [
+    'TrialSense diligence summary',
+    `Case: ${activeCase.title}`,
+    `Phase: ${activeCase.phase}`,
+    `Status: ${activeCase.status}`,
+    `Confidence: ${activeCase.confidenceLabel} (${activeCase.confidenceValue}%)`,
+    '',
+    'Summary',
+    ...activeCase.summaryRows.map(([label, value]) => `${label}: ${value}`),
+    '',
+    'Risk flags',
+    ...activeCase.riskFlags.map(
+      ([category, title, body]) => `${category} - ${title}: ${body}`,
+    ),
+    '',
+    'Open questions',
+    ...activeCase.questions.map((question) =>
+      answeredQuestions.includes(question)
+        ? `[answered] ${question}`
+        : `[open] ${question}`,
+    ),
+    '',
+    'Source packet',
+    ...activeCase.sourcePacket.map(
+      ([label, status, detail]) => `${label} (${status}): ${detail}`,
+    ),
+  ].join('\n')
+  const summaryHref = `data:text/plain;charset=utf-8,${encodeURIComponent(
+    summaryText,
+  )}`
+  const summaryFilename = `trialsense-${activeCase.title
+    .toLowerCase()
+    .replaceAll(' ', '-')}.txt`
 
   function toggleQuestion(question: string) {
     setAnsweredQuestions((currentQuestions) =>
@@ -25,6 +61,7 @@ export function TrialSenseSection() {
         ? currentQuestions.filter((item) => item !== question)
         : [...currentQuestions, question],
     )
+    setSummaryStatus('Draft summary')
   }
 
   return (
@@ -49,6 +86,7 @@ export function TrialSenseSection() {
                 onClick={() => {
                   setActiveCaseIndex(index)
                   setAnsweredQuestions([])
+                  setSummaryStatus('Draft summary')
                 }}
                 type="button"
               >
@@ -101,6 +139,24 @@ export function TrialSenseSection() {
           <div className="trial-evidence-layout">
             <div className="trial-panel">
               <div className="studio-panel-heading">
+                <LibraryBig size={18} />
+                <strong>Source packet</strong>
+              </div>
+              <div className="source-packet-list">
+                {activeCase.sourcePacket.map(([label, status, detail, tone]) => (
+                  <div className="source-packet-row" key={label}>
+                    <SignalBadge tone={tone}>{status}</SignalBadge>
+                    <div>
+                      <strong>{label}</strong>
+                      <p>{detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="trial-panel">
+              <div className="studio-panel-heading">
                 <FileText size={18} />
                 <strong>Evidence trail</strong>
               </div>
@@ -144,6 +200,25 @@ export function TrialSenseSection() {
                   <p>{value}</p>
                 </div>
               ))}
+            </div>
+            <div className="summary-actions">
+              <button
+                className="report-button"
+                onClick={() => setSummaryStatus('Summary ready')}
+                type="button"
+              >
+                {summaryStatus}
+              </button>
+              {summaryStatus === 'Summary ready' ? (
+                <a
+                  className="download-link"
+                  download={summaryFilename}
+                  href={summaryHref}
+                >
+                  <Download size={15} />
+                  Download .txt
+                </a>
+              ) : null}
             </div>
           </div>
         </div>
