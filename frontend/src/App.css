@@ -6,6 +6,7 @@ main {
 .case-study-section,
 .scenario-section,
 .model-studio-section,
+.trialsense-section,
 .principles-section,
 .specifications-section,
 .inventory-section,
@@ -384,6 +385,7 @@ main {
 .case-study-section,
 .scenario-section,
 .model-studio-section,
+.trialsense-section,
 .specifications-section,
 .inventory-section,
 .components-section {
@@ -972,6 +974,188 @@ main {
   width: max-content;
 }
 
+.trialsense-shell {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.32fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.trial-intake-panel,
+.trial-panel,
+.risk-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.trial-intake-panel,
+.trial-panel {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 16px;
+}
+
+.trial-case-list {
+  display: grid;
+  gap: 10px;
+}
+
+.trial-case-list button {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  color: var(--muted);
+  background: #fbfaf6;
+  text-align: left;
+}
+
+.trial-case-list button.active {
+  border-color: rgba(9, 124, 119, 0.42);
+  color: var(--ink);
+  background: var(--teal-soft);
+}
+
+.trial-case-list span {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.trial-case-list small {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.trial-intake-panel textarea {
+  min-height: 260px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  color: var(--ink);
+  background: #fbfaf6;
+  font: inherit;
+  font-size: 14px;
+}
+
+.trialsense-workspace {
+  display: grid;
+  gap: 16px;
+}
+
+.trialsense-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.trial-review-grid,
+.trial-evidence-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.trial-risk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.risk-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.risk-card > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.risk-card svg {
+  color: var(--teal);
+}
+
+.risk-card h3 {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.risk-card p,
+.summary-row p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.question-list {
+  display: grid;
+  gap: 10px;
+}
+
+.question-list button {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  color: var(--muted);
+  background: #fbfaf6;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.question-list button span {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--line-strong);
+  border-radius: 4px;
+  margin-top: 2px;
+}
+
+.question-list button[aria-pressed='true'] {
+  border-color: rgba(36, 112, 71, 0.38);
+  color: var(--ink);
+  background: var(--green-soft);
+}
+
+.question-list button[aria-pressed='true'] span {
+  border-color: var(--green);
+  background: var(--green);
+}
+
+.summary-rows {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.summary-row {
+  border-left: 3px solid var(--teal);
+  padding-left: 12px;
+}
+
+.summary-row span {
+  color: var(--subtle);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.summary-row p {
+  margin-top: 6px;
+}
+
 .case-study-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -1241,6 +1425,7 @@ main {
   .case-study-grid,
   .scenario-grid,
   .studio-shell,
+  .trialsense-shell,
   .spec-layout,
   .principles-grid {
     grid-template-columns: 1fr;
@@ -1249,6 +1434,8 @@ main {
   .reuse-grid,
   .studio-lower-grid,
   .studio-footer-grid,
+  .trial-review-grid,
+  .trial-evidence-layout,
   .spec-grid,
   .inventory-grid,
   .component-grid {
@@ -1280,6 +1467,10 @@ main {
   .reuse-grid,
   .studio-lower-grid,
   .studio-footer-grid,
+  .trial-review-grid,
+  .trial-evidence-layout,
+  .trial-risk-grid,
+  .summary-rows,
   .scenario-grid,
   .spec-grid,
   .inventory-grid,
@@ -1331,6 +1522,11 @@ main {
   }
 
   .studio-workspace-topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .trialsense-topline {
     align-items: flex-start;
     flex-direction: column;
   }

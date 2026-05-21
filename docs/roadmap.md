@@ -66,24 +66,33 @@ Future Phase 2 polish:
 
 ## Phase 3: TrialSense
 
-Status: planned
+Status: in progress
 
 Goal: create a clinical-trial diligence workbench grounded in source evidence and operational risk.
 
-Planned building blocks from this repo:
+Building blocks from this repo:
 
 - Source citation cards
 - Confidence meter
 - Agent activity timeline
 - Human review banner
 
-Potential features:
+Completed so far:
 
 - Trial text intake
 - Risk flags
 - Missing-context questions
 - Feasibility and eligibility review
 - Investor-style diligence summary
+- Evidence trail with source citations
+- Human review gate for unsupported feasibility claims
+
+Remaining Phase 3 work:
+
+- Add downloadable diligence summary output.
+- Add a fuller trial source packet view.
+- Add mobile README screenshot once the surface settles.
+- Decide whether saved review history needs backend persistence.
 
 ## Repository Rules
 

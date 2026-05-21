@@ -34,6 +34,10 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ![Model Behavior Studio product surface](docs/assets/screenshots/model-behavior-studio.png)
 
+### TrialSense
+
+![TrialSense clinical diligence workbench](docs/assets/screenshots/trialsense.png)
+
 ### Mobile hero
 
 ![Mobile view of the Human-AI Design System hero](docs/assets/screenshots/mobile-hero.png)
@@ -70,7 +74,8 @@ This project turns those trust decisions into reusable coded components. The sam
 - A live React and TypeScript prototype for AI-native product surfaces.
 - Reusable components for evidence, uncertainty, feedback, evals, prompt history, response comparison, agent progress, and human review.
 - A scenario library showing how the same primitives adapt across clinical diligence, model-behavior review, and research synthesis.
-- A first Phase 2 Model Behavior Studio surface for comparing, scoring, and tuning candidate AI responses.
+- A Phase 2 Model Behavior Studio surface for comparing, scoring, and tuning candidate AI responses.
+- A first Phase 3 TrialSense surface for clinical-trial feasibility and diligence review.
 - An interactive hero scenario switcher that previews the system in multiple workflow contexts.
 - A system-specs section that defines component jobs, state models, and reuse paths.
 - A visual inventory that shows component states before they are reused in larger product screens.
@@ -89,7 +94,7 @@ This project turns those trust decisions into reusable coded components. The sam
 
 ## Portfolio Sequence
 
-This repo is the foundation for two planned follow-on projects:
+This repo is the foundation for two follow-on product surfaces:
 
 - **Model Behavior Studio**: a workspace for comparing, scoring, and tuning AI response behavior.
 - **TrialSense**: a clinical-trial diligence workbench for source-grounded review of trial design, feasibility, and operational risk.
@@ -135,7 +140,7 @@ GitHub Actions also runs frontend lint and build checks on pushes and pull reque
 
 ## Status
 
-The current repo contains a working frontend prototype, project documentation, CI, and a GitHub Pages deployment workflow that publishes the built app to the `gh-pages` branch. Phase 1 and Phase 2 frontend baselines are complete. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
+The current repo contains a working frontend prototype, project documentation, CI, and a GitHub Pages deployment workflow that publishes the built app to the `gh-pages` branch. Phase 1 and Phase 2 frontend baselines are complete, and Phase 3 has started with the first TrialSense workflow. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
 
 ## Documentation
 
@@ -146,4 +151,5 @@ The current repo contains a working frontend prototype, project documentation, C
 - `docs/model-behavior-studio.md`: Phase 2 product-surface plan and current implementation
 - `docs/roadmap.md`: project sequence, future phases, and repository organization rules
 - `docs/scenario-fixtures.md`: reusable scenario data structure for follow-on projects
+- `docs/trialsense.md`: Phase 3 clinical diligence workbench plan and current implementation
 - `docs/usage-notes.md`: when to use each AI-interface primitive

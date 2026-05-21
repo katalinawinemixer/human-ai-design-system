@@ -30,6 +30,9 @@ export function HeroSection() {
           <a href="#model-studio">
             Studio <ChevronRight size={16} />
           </a>
+          <a href="#trialsense">
+            TrialSense <ChevronRight size={16} />
+          </a>
           <a href="#specs">
             Specs <ChevronRight size={16} />
           </a>

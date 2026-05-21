@@ -38,10 +38,14 @@ The current app includes:
 - Component specification section with jobs, states, and reuse paths
 - Visual inventory section for checking component states
 - Scenario library with clinical diligence, model-behavior review, and research synthesis examples
+- Model Behavior Studio for behavior comparison, prompt iteration, scoring, and export
+- TrialSense for protocol intake, risk flags, missing context, evidence trails, and investor diligence summaries
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
 The Phase 2 Model Behavior Studio turns the component system into a product workflow. It shows how a reviewer can edit a behavior prompt, save a prompt version, compare candidate responses, choose the winning behavior, score the output, and generate a downloadable eval report. This demonstrates model-behavior judgment as an interface problem: the product is not only displaying AI output, it is helping a human decide which behavior should be trusted, tuned, or blocked.
+
+The Phase 3 TrialSense baseline applies the same primitives to clinical-trial diligence. It translates protocol intake into feasibility risk, eligibility pressure, missing-context questions, source-backed evidence, and investor-readable summary language.
 
 ## What This Demonstrates
 
@@ -56,7 +60,6 @@ The Phase 2 Model Behavior Studio turns the component system into a product work
 
 ## Next Iterations
 
-- Split each primitive into reusable component files.
-- Add screenshots and a demo GIF.
-- Turn the scenario library into reusable fixtures for follow-on prototypes.
-- Adapt the clinical-trial patterns for TrialSense.
+- Expand TrialSense with downloadable diligence output.
+- Add a fuller source packet view for clinical-trial review.
+- Decide whether saved TrialSense review history needs backend persistence.

@@ -7,6 +7,7 @@ import { ModelBehaviorStudioSection } from './sections/ModelBehaviorStudioSectio
 import { PrinciplesSection } from './sections/PrinciplesSection'
 import { ScenarioLibrarySection } from './sections/ScenarioLibrarySection'
 import { SpecificationsSection } from './sections/SpecificationsSection'
+import { TrialSenseSection } from './sections/TrialSenseSection'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <CaseStudySection />
       <ScenarioLibrarySection />
       <ModelBehaviorStudioSection />
+      <TrialSenseSection />
       <PrinciplesSection />
       <SpecificationsSection />
       <InventorySection />
