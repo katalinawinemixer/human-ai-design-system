@@ -3,6 +3,7 @@ main {
 }
 
 .hero-section,
+.portfolio-sequence-section,
 .case-study-section,
 .scenario-section,
 .model-studio-section,
@@ -173,6 +174,107 @@ main {
   display: grid;
   gap: 14px;
   padding: clamp(16px, 2.4vw, 26px);
+}
+
+.portfolio-sequence-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fbfaf6;
+}
+
+.portfolio-sequence-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(320px, 0.5fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: end;
+}
+
+.portfolio-sequence-heading h2 {
+  max-width: 760px;
+  margin-top: 12px;
+  color: var(--ink);
+  font-size: clamp(34px, 5vw, 76px);
+  line-height: 0.98;
+}
+
+.portfolio-sequence-heading > p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.sequence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.sequence-card {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--surface);
+}
+
+.sequence-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sequence-card-topline > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.sequence-card h3 {
+  color: var(--ink);
+  font-size: 20px;
+}
+
+.sequence-card p,
+.sequence-proof p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sequence-proof {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.sequence-proof strong {
+  color: var(--subtle);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sequence-proof p {
+  margin-top: 6px;
+}
+
+.sequence-link {
+  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  border: 1px solid rgba(9, 124, 119, 0.38);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  color: var(--teal);
+  background: var(--teal-soft);
+  font-size: 14px;
+  font-weight: 760;
 }
 
 .surface-toolbar,
@@ -1028,6 +1130,46 @@ main {
   gap: 16px;
 }
 
+.trialsense-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.trialsense-product-brief {
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-top: 32px;
+  padding: 16px;
+  background: var(--surface);
+}
+
+.product-brief-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.product-brief-card {
+  border-left: 3px solid var(--teal);
+  padding-left: 12px;
+}
+
+.product-brief-card span {
+  color: var(--subtle);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.product-brief-card p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .trial-review-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1435,6 +1577,7 @@ main {
 
 @media (max-width: 1100px) {
   .hero-grid,
+  .portfolio-sequence-heading,
   .surface-grid,
   .case-study-grid,
   .scenario-grid,
@@ -1446,6 +1589,7 @@ main {
   }
 
   .reuse-grid,
+  .sequence-grid,
   .studio-lower-grid,
   .studio-footer-grid,
   .trial-review-grid,
@@ -1479,11 +1623,13 @@ main {
 
   .hero-grid,
   .reuse-grid,
+  .sequence-grid,
   .studio-lower-grid,
   .studio-footer-grid,
   .trial-review-grid,
   .trial-evidence-layout,
   .trial-risk-grid,
+  .product-brief-grid,
   .summary-rows,
   .scenario-grid,
   .spec-grid,

@@ -4,8 +4,9 @@
 
 This project is a coded design-system prototype for AI-native product interfaces. It focuses on interface patterns that make model behavior easier to inspect: evidence, confidence, uncertainty, feedback, evaluation, prompt history, comparison, and human review.
 
-The system is the foundation for two planned portfolio prototypes:
+The system now supports a completed three-phase portfolio sequence:
 
+- **Human-AI Design System**: reusable AI interface primitives for evidence, uncertainty, feedback, evaluation, comparison, agent activity, and review.
 - **Model Behavior Studio**: a workspace for comparing, scoring, and tuning AI response behavior.
 - **TrialSense**: a clinical-trial diligence workbench for source-grounded review of trial design, feasibility, and operational risk.
 
@@ -39,7 +40,7 @@ The current app includes:
 - Visual inventory section for checking component states
 - Scenario library with clinical diligence, model-behavior review, and research synthesis examples
 - Model Behavior Studio for behavior comparison, prompt iteration, scoring, and export
-- TrialSense for protocol intake, risk flags, missing context, evidence trails, and investor diligence summaries
+- TrialSense for protocol intake, risk flags, missing context, source packet status, evidence trails, downloadable output, and investor diligence summaries
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 

@@ -9,7 +9,7 @@ export function CaseStudySection() {
       <SectionHeader
         eyebrow="Portfolio case study"
         title="A design system for AI products where trust has to be earned."
-        body="This project packages the design language for two follow-on prototypes: a model-behavior evaluation studio and a clinical-trial diligence workbench."
+        body="This project packages three connected surfaces: a reusable AI design system, a model-behavior evaluation studio, and a clinical-trial diligence workbench."
       />
 
       <div className="case-study-grid">
@@ -52,7 +52,7 @@ export function CaseStudySection() {
           <article className="reuse-card" key={title}>
             <div>
               <SignalBadge tone={title === 'TrialSense' ? 'evidence' : 'good'}>
-                Next prototype
+                Product surface
               </SignalBadge>
               <h3>{title}</h3>
               <p>{body}</p>

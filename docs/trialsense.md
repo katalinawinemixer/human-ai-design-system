@@ -2,6 +2,24 @@
 
 TrialSense is Phase 3 of the portfolio sequence. It turns the source-grounding and review primitives into a clinical-trial diligence workbench for feasibility, eligibility, missing context, and investor-facing risk language.
 
+## Product Concept
+
+TrialSense is positioned as a focused diligence workbench for people who need to pressure-test the story around a clinical trial before that story becomes investment, portfolio, or operating language.
+
+Primary users:
+
+- Clinical operations teams checking whether the proposed enrollment or startup plan is realistic.
+- Healthcare investors or platform teams reviewing operational risk during diligence.
+- Product and research teams exploring how AI interfaces can keep clinical claims tied to source evidence.
+
+Core job:
+
+- Turn protocol details, feasibility assumptions, source packets, and operational constraints into a cautious review surface.
+- Separate directly supported claims from inferred or unsupported claims.
+- Give the reviewer a clear exportable summary without pretending the AI has more evidence than it does.
+
+The concept is intentionally narrow. It does not claim to replace clinical, regulatory, medical, or investment judgment; it shows how AI product interfaces can make that judgment easier to inspect.
+
 ## Current Surface
 
 The first implementation lives in `frontend/src/sections/TrialSenseSection.tsx` with product data in `frontend/src/data/trialSenseContent.ts`.

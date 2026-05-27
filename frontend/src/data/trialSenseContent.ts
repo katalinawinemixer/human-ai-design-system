@@ -19,6 +19,21 @@ export type TrialSenseCase = {
   summaryRows: readonly (readonly [string, string])[]
 }
 
+export const trialSenseProductBrief = [
+  [
+    'Primary user',
+    'Clinical operations, diligence, or venture teams reviewing whether a trial story is supported by the underlying protocol and feasibility evidence.',
+  ],
+  [
+    'Core job',
+    'Turn trial source material into a cautious, reviewable risk read before unsupported claims become investor-facing language.',
+  ],
+  [
+    'Operator edge',
+    'The product treats eligibility criteria, site assumptions, monitoring burden, and governance gaps as real workflow constraints rather than generic AI summary fodder.',
+  ],
+] as const
+
 export const trialSenseCases = [
   {
     title: 'Dose expansion feasibility',

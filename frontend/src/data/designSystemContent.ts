@@ -69,6 +69,33 @@ export const reuseMap = [
   ],
 ] as const
 
+export const portfolioSequence = [
+  {
+    phase: 'Phase 1',
+    title: 'Human-AI Design System',
+    status: 'Complete foundation',
+    body: 'Reusable interface primitives for evidence, confidence, feedback, evaluation, comparison, agent progress, and review gates.',
+    proof:
+      'Shows coded design-system thinking for AI products instead of a one-off mockup.',
+  },
+  {
+    phase: 'Phase 2',
+    title: 'Model Behavior Studio',
+    status: 'Complete product surface',
+    body: 'A workspace for comparing candidate responses, tuning behavior prompts, scoring outputs, and exporting an eval note.',
+    proof:
+      'Shows product judgment around model behavior, evaluation, and human-in-the-loop review.',
+  },
+  {
+    phase: 'Phase 3',
+    title: 'TrialSense',
+    status: 'Complete domain concept',
+    body: 'A clinical-trial diligence workbench for protocol intake, feasibility risk, source gaps, review gates, and investor-readable summaries.',
+    proof:
+      'Shows how the same AI interface primitives can support healthcare diligence work grounded in operator experience.',
+  },
+] as const
+
 export { scenarioFixtures as scenarioLibrary } from './scenarioFixtures'
 
 export const componentSpecs = [

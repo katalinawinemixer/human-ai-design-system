@@ -6,6 +6,7 @@ import {
   FileText,
   HelpCircle,
   LibraryBig,
+  Target,
   Stethoscope,
 } from 'lucide-react'
 import { AgentTimeline } from '../components/AgentTimeline'
@@ -14,7 +15,10 @@ import { ConfidenceMeter } from '../components/ConfidenceMeter'
 import { ReviewBanner } from '../components/ReviewBanner'
 import { SectionHeader } from '../components/SectionHeader'
 import { SignalBadge } from '../components/SignalBadge'
-import { trialSenseCases } from '../data/trialSenseContent'
+import {
+  trialSenseCases,
+  trialSenseProductBrief,
+} from '../data/trialSenseContent'
 
 export function TrialSenseSection() {
   const [activeCaseIndex, setActiveCaseIndex] = useState(0)
@@ -71,6 +75,21 @@ export function TrialSenseSection() {
         title="TrialSense turns source-grounded primitives into a diligence workbench."
         body="The first TrialSense surface reviews protocol text for feasibility risk, missing context, eligibility pressure, and investor-ready diligence language."
       />
+
+      <div className="trialsense-product-brief">
+        <div className="studio-panel-heading">
+          <Target size={18} />
+          <strong>Standalone product concept</strong>
+        </div>
+        <div className="product-brief-grid">
+          {trialSenseProductBrief.map(([label, body]) => (
+            <article className="product-brief-card" key={label}>
+              <span>{label}</span>
+              <p>{body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
 
       <div className="trialsense-shell">
         <div className="trial-intake-panel">

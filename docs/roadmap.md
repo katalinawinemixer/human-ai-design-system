@@ -1,6 +1,6 @@
 # Project Roadmap
 
-This roadmap keeps the portfolio system organized as it grows. The current repo is the shared foundation; follow-on projects should reuse its patterns instead of becoming scattered one-off prototypes.
+This roadmap keeps the portfolio system organized as it grows. The current repo is the shared foundation; follow-on work should reuse its patterns instead of becoming scattered one-off prototypes.
 
 ## Phase 1: Human-AI Design System
 
@@ -95,6 +95,16 @@ Future Phase 3 polish:
 
 - Refresh screenshots when TrialSense changes.
 - Add persistence only if saved review history becomes important enough to justify backend scope.
+
+## Future Backlog
+
+Future work after the three completed phases is tracked in GitHub Issues. Use labels to keep the backlog readable:
+
+- `portfolio polish` for public narrative, screenshots, and demo presentation.
+- `trialsense` for clinical diligence product ideas.
+- `content` for README, case-study, and documentation edits.
+- `accessibility` for keyboard, label, contrast, and responsive checks.
+- `backend future` for upload, parsing, persistence, or model-provider work.
 
 ## Repository Rules
 

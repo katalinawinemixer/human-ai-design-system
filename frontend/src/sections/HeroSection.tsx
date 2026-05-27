@@ -24,6 +24,9 @@ export function HeroSection() {
           <a href="#case-study">
             Case study <ChevronRight size={16} />
           </a>
+          <a href="#portfolio-sequence">
+            Sequence <ChevronRight size={16} />
+          </a>
           <a href="#scenarios">
             Scenarios <ChevronRight size={16} />
           </a>
@@ -55,8 +58,8 @@ export function HeroSection() {
             the foundation for future AI product prototypes.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#components">
-              View system <ArrowRight size={16} />
+            <a className="primary-action" href="#portfolio-sequence">
+              View sequence <ArrowRight size={16} />
             </a>
             <a className="secondary-action" href="#case-study">
               Portfolio story
