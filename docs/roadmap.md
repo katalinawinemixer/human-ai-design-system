@@ -98,13 +98,9 @@ Future Phase 3 polish:
 
 ## Future Backlog
 
-Future work after the three completed phases is tracked in GitHub Issues. Use labels to keep the backlog readable:
+Future work after the three completed phases is tracked in `docs/future-backlog.md` so the public GitHub Issues count does not make optional polish look like defects.
 
-- `portfolio polish` for public narrative, screenshots, and demo presentation.
-- `trialsense` for clinical diligence product ideas.
-- `content` for README, case-study, and documentation edits.
-- `accessibility` for keyboard, label, contrast, and responsive checks.
-- `backend future` for upload, parsing, persistence, or model-provider work.
+Use GitHub Issues only for active bugs, active implementation tasks, or scoped work that is ready to be picked up immediately.
 
 ## Repository Rules
 

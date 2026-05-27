@@ -170,7 +170,7 @@ GitHub Actions also runs frontend lint and build checks on pushes and pull reque
 
 The current repo contains a working frontend prototype, project documentation, CI, and a GitHub Pages deployment workflow that publishes the built app to the `gh-pages` branch. Phase 1, Phase 2, and Phase 3 frontend baselines are complete. There is no backend service yet; the `backend/` folder is intentionally reserved so the repository stays organized as the project grows.
 
-Future work is tracked in GitHub Issues so the roadmap stays organized instead of scattering ideas across the repo.
+Optional future work is tracked in `docs/future-backlog.md` so the public issue tracker stays reserved for active bugs or scoped implementation work.
 
 ## Documentation
 
@@ -178,6 +178,7 @@ Future work is tracked in GitHub Issues so the roadmap stays organized instead o
 - `docs/case-study.md`: portfolio case-study draft
 - `docs/component-api.md`: current component props and usage surface
 - `docs/component-specs.md`: component jobs, states, and reuse paths
+- `docs/future-backlog.md`: optional future polish ideas kept out of the public issue count
 - `docs/model-behavior-studio.md`: Phase 2 product-surface plan and current implementation
 - `docs/roadmap.md`: project sequence, future phases, and repository organization rules
 - `docs/scenario-fixtures.md`: reusable scenario data structure for follow-on projects
