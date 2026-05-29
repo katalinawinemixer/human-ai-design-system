@@ -36,11 +36,16 @@ The current app includes:
 - Prompt history panel
 - Response comparison workspace
 - Human review banner
+- Persistent section navigation
+- Task-based get-started paths
+- States and motion section with a pause control
+- Component catalog with jobs, states, and reuse paths
 - Component specification section with jobs, states, and reuse paths
 - Visual inventory section for checking component states
 - Scenario library with clinical diligence, model-behavior review, and research synthesis examples
 - Model Behavior Studio for behavior comparison, prompt iteration, scoring, and export
 - TrialSense for protocol intake, risk flags, missing context, source packet status, evidence trails, downloadable output, and cautious diligence summaries
+- Resource section linking to implementation docs
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
@@ -53,6 +58,8 @@ TrialSense applies the same primitives to clinical-trial diligence. It translate
 - React and TypeScript frontend with static fixtures and local UI state
 - Reusable patterns for AI-specific interface needs
 - Trust, confidence, evidence, and review states
+- Persistent navigation and task-based entry points
+- Pauseable motion examples for state feedback
 - Model-behavior review beyond generic chatbot UI
 - Organized documentation that turns UI ideas into reusable product rules
 - Component states that can be reused in related product workflows

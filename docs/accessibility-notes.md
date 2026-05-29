@@ -9,7 +9,9 @@ These notes keep the design-system primitives usable as the prototype grows into
 - Confidence meters should include a text label and an `aria-label` that communicates the percentage.
 - Review banners should use explicit text for the action button so the decision point is clear.
 - Source and confidence states should use text labels in addition to color so evidence quality is not color-only.
-- Scenario, component, and inventory sections should keep meaningful headings so the page is scannable by assistive technology.
+- Persistent navigation should use real links with visible labels, not icon-only controls.
+- Motion examples should include a pause control and respect reduced-motion preferences.
+- Scenario, component, state, resource, and inventory sections should keep meaningful headings so the page is scannable by assistive technology.
 
 ## Manual Checks
 
@@ -18,7 +20,8 @@ These notes keep the design-system primitives usable as the prototype grows into
 - Confirm mobile tap targets remain comfortable on narrow screens.
 - Check that status, confidence, and source quality are understandable without relying on color.
 - Recheck contrast when adding new palettes, chart colors, or lower-emphasis text.
-- Add reduced-motion handling before introducing animation beyond simple hover or transition states.
+- Confirm the states and motion section remains understandable when motion is paused.
+- Confirm reduced-motion handling before introducing animation beyond simple hover or transition states.
 
 ## Follow-On Project Notes
 

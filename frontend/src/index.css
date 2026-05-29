@@ -1,12 +1,12 @@
 :root {
-  --bg: #f7f4ee;
-  --surface: #fffdf8;
+  --bg: #f4f7f8;
+  --surface: #ffffff;
   --surface-2: #f0f6f5;
   --ink: #171717;
   --muted: #66615b;
-  --subtle: #928a80;
-  --line: #ded7cc;
-  --line-strong: #c9bfb2;
+  --subtle: #7d8991;
+  --line: #d8e0e4;
+  --line-strong: #bdc9d0;
   --teal: #097c77;
   --teal-soft: #dff0ee;
   --blue: #315db8;

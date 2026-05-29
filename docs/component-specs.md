@@ -11,6 +11,8 @@ This document keeps the Human-AI Design System organized as a reusable product f
 | Human feedback control | Capture user judgment as structured signal instead of a generic reaction. | Useful, speculative, unhelpful | Behavior tuning loops, eval dataset collection, reviewer triage |
 | Agent activity timeline | Show work in progress so users can inspect what has been read, checked, or deferred. | Complete, active, waiting, error | Research agents, diligence workflows, source ingestion status |
 | Eval scorecard | Make model quality legible through rubrics that product, research, and domain experts can discuss. | Passing, needs attention, regression | Model Behavior Studio scoring, prompt iteration reviews, release checks |
+| Prompt history panel | Keep prompt changes visible when behavior edits are part of the decision trail. | Current, saved, archived | Prompt tuning, behavior reviews, audit trails for changed instructions |
+| Comparison workspace | Let reviewers compare candidate outputs before selecting, blocking, or revising a behavior. | Preferred, needs review, rejected | Model Behavior Studio response selection, eval review, side-by-side synthesis checks |
 | Human review banner | Interrupt only when unchecked output carries enough risk to require intervention. | Required, recommended, approved | Memo approval, clinical-claim validation, high-risk output gates |
 
 ## Review Checklist

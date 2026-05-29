@@ -19,7 +19,7 @@ It includes:
 - An export-style eval report panel that records source set, run count, prompt state, selected response, decision, risk, next eval, and export scope.
 - Generated export preview for the active behavior profile.
 - Downloadable `.txt` export artifact for the generated report.
-- Desktop and mobile README screenshots for the current studio surface.
+- README screenshot for the current studio surface.
 
 ## Product Intent
 

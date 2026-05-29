@@ -20,6 +20,7 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 - Prompt history and response comparison views for reviewing model behavior.
 - Eval scorecards and downloadable review output.
 - Agent activity timelines that show progress without hiding work.
+- Pauseable state-motion examples for review, waiting, caution, and blocked output states.
 - Clinical-trial diligence screens grounded in feasibility, eligibility, source gaps, and operational risk.
 
 ## What's Included
@@ -27,8 +28,9 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 - `Human-AI Design System`: reusable components for trust, review, evidence, and evaluation states.
 - `Model Behavior Studio`: an example workspace for comparing, scoring, and tuning candidate AI responses.
 - `TrialSense`: an example clinical-trial diligence workbench for reviewing trial design, feasibility, and source support.
+- A task-based get-started path, persistent section navigation, and resource links into the project docs.
 - A scenario library showing the same patterns across clinical diligence, model-behavior review, and research synthesis.
-- Component specs, usage notes, accessibility notes, and current implementation docs.
+- A component catalog with jobs, states, reuse paths, specs, usage notes, accessibility notes, and current implementation docs.
 - CI and GitHub Pages deployment so the project can be reviewed as a working frontend prototype.
 
 ## Screenshots
@@ -41,9 +43,21 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ![Human-AI Design System hero interface](docs/assets/screenshots/hero.png)
 
+### Get Started
+
+![Task-based get-started paths for the design system](docs/assets/screenshots/get-started.png)
+
 ### Product Surfaces
 
 ![Three product surfaces using the same AI review primitives](docs/assets/screenshots/product-surfaces.png)
+
+### Component Catalog
+
+![Component catalog with jobs, states, and reuse paths](docs/assets/screenshots/component-catalog.png)
+
+### States and Motion
+
+![Pauseable AI review state patterns](docs/assets/screenshots/states-motion.png)
 
 ### Component Specs
 
@@ -67,15 +81,7 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ### Mobile Views
 
-![Mobile view of TrialSense](docs/assets/screenshots/mobile-trialsense.png)
-
 ![Mobile view of the Human-AI Design System hero](docs/assets/screenshots/mobile-hero.png)
-
-![Mobile view of the product surfaces](docs/assets/screenshots/mobile-product-surfaces.png)
-
-![Mobile view of the scenario library](docs/assets/screenshots/mobile-scenario-library.png)
-
-![Mobile view of the Model Behavior Studio](docs/assets/screenshots/mobile-model-behavior-studio.png)
 
 ## Project Structure
 

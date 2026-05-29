@@ -37,15 +37,18 @@ The built files are published to the repository's `gh-pages` branch.
 
 ```text
 Hero                 AI review workspace preview
+Get started          Task-based paths and local run commands
 Product surfaces     Component foundation, model review, and TrialSense
 System overview      Implementation notes and reuse rationale
+Component library    Catalog, states, reuse paths, and live examples
+States and motion    Review-state examples with pauseable motion
 Scenario library     Example data across review workflows
 Model Behavior Studio Response comparison and eval report workflow
 TrialSense           Clinical-trial diligence workflow
 System intent        Design principles around trust, confidence, and review
 Component specs      Component jobs, states, and reuse paths
 Visual inventory     Component state examples
-Component library    Reusable AI interface patterns
+Resources            Links to project docs in GitHub
 ```
 
 ## Source Structure
@@ -78,10 +81,13 @@ The interface is intentionally not a generic chatbot. It is built around AI prod
 
 The sample content uses clinical-trial diligence scenarios because those examples connect the interface patterns to real operational judgment.
 
+The page uses a persistent section rail, task-based get-started cards, a practical component catalog, and pauseable state-motion examples so the prototype behaves more like a working design-system resource than a single long case-study page.
+
 ## Verification
 
 ```bash
 bun run lint
+bun run test
 bun run build
 ```
 

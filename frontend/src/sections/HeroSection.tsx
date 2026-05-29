@@ -24,8 +24,17 @@ export function HeroSection() {
           <a href="#system-overview">
             Overview <ChevronRight size={16} />
           </a>
+          <a href="#get-started">
+            Get started <ChevronRight size={16} />
+          </a>
           <a href="#product-surfaces">
             Surfaces <ChevronRight size={16} />
+          </a>
+          <a href="#components">
+            Components <ChevronRight size={16} />
+          </a>
+          <a href="#states-motion">
+            States <ChevronRight size={16} />
           </a>
           <a href="#scenarios">
             Scenarios <ChevronRight size={16} />
@@ -35,15 +44,6 @@ export function HeroSection() {
           </a>
           <a href="#trialsense">
             TrialSense <ChevronRight size={16} />
-          </a>
-          <a href="#specs">
-            Specs <ChevronRight size={16} />
-          </a>
-          <a href="#inventory">
-            Inventory <ChevronRight size={16} />
-          </a>
-          <a href="#components">
-            Components <ChevronRight size={16} />
           </a>
         </div>
       </nav>
@@ -58,11 +58,11 @@ export function HeroSection() {
             the foundation for related AI product workflows.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#product-surfaces">
-              View surfaces <ArrowRight size={16} />
+            <a className="primary-action" href="#components">
+              Explore components <ArrowRight size={16} />
             </a>
-            <a className="secondary-action" href="#system-overview">
-              System overview
+            <a className="secondary-action" href="#product-surfaces">
+              View workflows
             </a>
           </div>
           <div className="scenario-switcher" aria-label="Preview scenario">

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import App from '../App'
 import { AgentTimeline } from '../components/AgentTimeline'
@@ -11,20 +11,74 @@ import { PromptHistory } from '../components/PromptHistory'
 import { ReviewBanner } from '../components/ReviewBanner'
 import { SectionHeader } from '../components/SectionHeader'
 import { SignalBadge } from '../components/SignalBadge'
+import {
+  componentIndex,
+  componentSpecs,
+  navigationItems,
+  resourceLinks,
+} from '../data/designSystemContent'
+import { StatesMotionSection } from '../sections/StatesMotionSection'
 import { TrialSenseSection } from '../sections/TrialSenseSection'
 
 describe('App', () => {
   it('renders the current major page sections', () => {
     const { container } = render(<App />)
 
+    expect(container.querySelector('.site-rail')).toBeInTheDocument()
+    expect(container.querySelector('#get-started')).toBeInTheDocument()
     expect(container.querySelector('#product-surfaces')).toBeInTheDocument()
     expect(container.querySelector('#system-overview')).toBeInTheDocument()
+    expect(container.querySelector('#components')).toBeInTheDocument()
+    expect(container.querySelector('#states-motion')).toBeInTheDocument()
     expect(container.querySelector('#scenarios')).toBeInTheDocument()
     expect(container.querySelector('#model-studio')).toBeInTheDocument()
     expect(container.querySelector('#trialsense')).toBeInTheDocument()
     expect(container.querySelector('#specs')).toBeInTheDocument()
     expect(container.querySelector('#inventory')).toBeInTheDocument()
-    expect(container.querySelector('#components')).toBeInTheDocument()
+    expect(container.querySelector('#resources')).toBeInTheDocument()
+  })
+
+  it('keeps persistent navigation aligned to implemented sections', () => {
+    const { container } = render(<App />)
+    const rail = within(screen.getByRole('navigation', { name: 'Primary sections' }))
+
+    navigationItems.forEach(([label, href]) => {
+      expect(rail.getByRole('link', { name: label })).toHaveAttribute('href', href)
+      expect(container.querySelector(href)).toBeInTheDocument()
+    })
+  })
+
+  it('keeps the component catalog in parity with the component index', () => {
+    expect(componentSpecs.map((component) => component.name)).toEqual([...componentIndex])
+  })
+
+  it('renders all resource links with GitHub doc targets', () => {
+    render(<App />)
+    const resources = within(document.querySelector('#resources') as HTMLElement)
+
+    resourceLinks.forEach((resource) => {
+      expect(resources.getByRole('link', { name: new RegExp(resource.title) })).toHaveAttribute(
+        'href',
+        resource.href,
+      )
+      expect(resource.href).toContain('/docs/')
+    })
+  })
+})
+
+describe('StatesMotionSection', () => {
+  it('toggles motion pause state', async () => {
+    const user = userEvent.setup()
+    render(<StatesMotionSection />)
+
+    const pauseButton = screen.getByRole('button', { name: 'Pause motion' })
+    expect(pauseButton).toHaveAttribute('aria-pressed', 'false')
+
+    await user.click(pauseButton)
+    expect(screen.getByRole('button', { name: 'Resume motion' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    )
   })
 })
 

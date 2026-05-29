@@ -40,16 +40,15 @@ Screenshots live in `docs/assets/screenshots/`.
 Current screenshot set:
 
 - `hero.png`
+- `get-started.png`
 - `product-surfaces.png`
+- `component-catalog.png`
+- `states-motion.png`
 - `system-specs.png`
 - `scenario-library.png`
 - `model-behavior-studio.png`
 - `trialsense.png`
 - `visual-inventory.png`
 - `mobile-hero.png`
-- `mobile-product-surfaces.png`
-- `mobile-scenario-library.png`
-- `mobile-model-behavior-studio.png`
-- `mobile-trialsense.png`
 
 Refresh screenshots whenever a visible section changes enough that the README would otherwise misrepresent the live app.

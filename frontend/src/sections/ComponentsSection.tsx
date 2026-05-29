@@ -17,7 +17,7 @@ import { FeedbackBar } from '../components/FeedbackBar'
 import { PromptHistory } from '../components/PromptHistory'
 import { ReviewBanner } from '../components/ReviewBanner'
 import { SectionHeader } from '../components/SectionHeader'
-import { citations, componentIndex } from '../data/designSystemContent'
+import { citations, componentIndex, componentSpecs } from '../data/designSystemContent'
 
 export function ComponentsSection() {
   return (
@@ -31,6 +31,26 @@ export function ComponentsSection() {
       <div className="component-index">
         {componentIndex.map((component) => (
           <span key={component}>{component}</span>
+        ))}
+      </div>
+
+      <div className="component-catalog">
+        {componentSpecs.map((component) => (
+          <article className="catalog-card" key={component.name}>
+            <div>
+              <h3>{component.name}</h3>
+              <p>{component.role}</p>
+            </div>
+            <div className="catalog-states">
+              {component.states.map((state) => (
+                <span key={state}>{state}</span>
+              ))}
+            </div>
+            <div className="catalog-reuse">
+              <span>Reuse path</span>
+              <p>{component.reuse}</p>
+            </div>
+          </article>
         ))}
       </div>
 

@@ -28,7 +28,7 @@ Completed scope:
 - Short README demo GIF
 - Reusable scenario fixture structure for follow-on projects
 - Accessibility notes for keyboard behavior, labels, contrast, and review states
-- Mobile README screenshots
+- Mobile hero screenshot
 
 ## Surface 2: Model Behavior Studio
 
@@ -56,7 +56,7 @@ Completed so far:
 - Export-style eval report panel with source set, run count, prompt state, selected response, decision, risk, next eval, and export scope
 - Generated export preview for the active behavior profile
 - Downloadable `.txt` export artifact
-- Desktop and mobile README screenshots for the studio surface
+- README screenshot for the studio surface
 - Backend decision: no backend required for this static prototype
 
 Future polish:
@@ -83,12 +83,12 @@ Completed so far:
 - Risk flags
 - Missing-context questions
 - Feasibility and eligibility review
-- Investor-style diligence summary
+- Diligence summary
 - Evidence trail with source citations
 - Human review gate for unsupported feasibility claims
 - Fuller trial source packet view
 - Downloadable `.txt` diligence summary output
-- Mobile README screenshot
+- README screenshot
 - Backend decision: no backend required for this static prototype
 
 Future polish:

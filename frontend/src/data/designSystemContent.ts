@@ -41,6 +41,120 @@ export const componentIndex = [
   'Human review banner',
 ] as const
 
+export const navigationItems = [
+  ['Overview', '#system-overview'],
+  ['Get started', '#get-started'],
+  ['Surfaces', '#product-surfaces'],
+  ['Components', '#components'],
+  ['States', '#states-motion'],
+  ['Scenarios', '#scenarios'],
+  ['Studio', '#model-studio'],
+  ['TrialSense', '#trialsense'],
+  ['Docs', '#resources'],
+] as const
+
+export const getStartedPaths = [
+  {
+    title: 'Understand the system',
+    body: 'Start with the overview, product surfaces, and the review model behind the component set.',
+    href: '#system-overview',
+    action: 'Read overview',
+  },
+  {
+    title: 'Inspect the components',
+    body: 'Browse each reusable pattern with its job, states, reuse path, and live example.',
+    href: '#components',
+    action: 'Open catalog',
+  },
+  {
+    title: 'See a workflow',
+    body: 'Review how the primitives behave inside Model Behavior Studio and TrialSense.',
+    href: '#model-studio',
+    action: 'View workflow',
+  },
+  {
+    title: 'Run it locally',
+    body: 'Install the frontend dependencies, start Vite, and inspect the prototype in a browser.',
+    href: '#run-locally',
+    action: 'Use commands',
+  },
+] as const
+
+export const resourceLinks = [
+  {
+    title: 'Component specs',
+    body: 'Jobs, states, and reuse paths for each AI review primitive.',
+    href: 'https://github.com/katalinawinemixer/human-ai-design-system/blob/main/docs/component-specs.md',
+  },
+  {
+    title: 'Usage notes',
+    body: 'When to use each pattern and what problem it solves.',
+    href: 'https://github.com/katalinawinemixer/human-ai-design-system/blob/main/docs/usage-notes.md',
+  },
+  {
+    title: 'Accessibility notes',
+    body: 'Keyboard, label, contrast, review-state, and reduced-motion guidance.',
+    href: 'https://github.com/katalinawinemixer/human-ai-design-system/blob/main/docs/accessibility-notes.md',
+  },
+  {
+    title: 'Model Behavior Studio',
+    body: 'Current implementation notes for the response comparison workflow.',
+    href: 'https://github.com/katalinawinemixer/human-ai-design-system/blob/main/docs/model-behavior-studio.md',
+  },
+  {
+    title: 'TrialSense',
+    body: 'Current implementation notes for the clinical diligence workflow.',
+    href: 'https://github.com/katalinawinemixer/human-ai-design-system/blob/main/docs/trialsense.md',
+  },
+  {
+    title: 'Roadmap',
+    body: 'What is implemented now and what should stay optional.',
+    href: 'https://github.com/katalinawinemixer/human-ai-design-system/blob/main/docs/roadmap.md',
+  },
+] as const
+
+export const reviewStatePatterns = [
+  {
+    state: 'Evidence found',
+    signal: 'Supported',
+    tone: 'evidence',
+    body: 'Claims can move forward when the source trail is visible and confidence language matches the evidence.',
+  },
+  {
+    state: 'Needs source',
+    signal: 'Waiting',
+    tone: 'warn',
+    body: 'The interface keeps the draft usable, but blocks final language until the missing source is attached.',
+  },
+  {
+    state: 'Low confidence',
+    signal: 'Caution',
+    tone: 'warn',
+    body: 'The answer stays in review mode and names the assumptions instead of presenting a clean conclusion.',
+  },
+  {
+    state: 'Output blocked',
+    signal: 'Stop',
+    tone: 'danger',
+    body: 'The system stops export when unsupported claims would create too much downstream risk.',
+  },
+] as const
+
+export const motionPrinciples = [
+  [
+    'Motion clarifies state',
+    'Animation should make progress, waiting, review, and blocked states easier to understand.',
+  ],
+  [
+    'Motion can be paused',
+    'The interface should keep meaning available without requiring animation or timed effects.',
+  ],
+  [
+    'Motion stays functional',
+    'Movement should support attention and hierarchy, not decorate a surface that is already clear.',
+  ],
+] as const
+
 export const designDecisions = [
   [
     'Trust is treated as a workflow',
@@ -128,6 +242,18 @@ export const componentSpecs = [
     role: 'Makes model quality legible through rubrics that product, research, and domain experts can discuss.',
     states: ['Passing', 'Needs attention', 'Regression'],
     reuse: 'Model Behavior Studio scoring, prompt iteration reviews, release checks.',
+  },
+  {
+    name: 'Prompt history panel',
+    role: 'Keeps prompt changes visible when behavior edits are part of the decision trail.',
+    states: ['Current', 'Saved', 'Archived'],
+    reuse: 'Prompt tuning, behavior reviews, audit trails for changed instructions.',
+  },
+  {
+    name: 'Comparison workspace',
+    role: 'Lets reviewers compare candidate outputs before selecting, blocking, or revising a behavior.',
+    states: ['Preferred', 'Needs review', 'Rejected'],
+    reuse: 'Model Behavior Studio response selection, eval review, side-by-side synthesis checks.',
   },
   {
     name: 'Human review banner',
