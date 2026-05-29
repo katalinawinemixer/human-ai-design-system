@@ -12,7 +12,7 @@ https://katalinawinemixer.github.io/human-ai-design-system/
 
 The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
-## What This Demonstrates
+## Implemented Patterns
 
 - Evidence states that show where an AI answer came from.
 - Confidence and uncertainty patterns that make risk visible.

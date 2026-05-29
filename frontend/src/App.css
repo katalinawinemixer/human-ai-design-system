@@ -3,7 +3,7 @@ main {
 }
 
 .hero-section,
-.portfolio-sequence-section,
+.product-surfaces-section,
 .case-study-section,
 .scenario-section,
 .model-studio-section,
@@ -176,20 +176,20 @@ main {
   padding: clamp(16px, 2.4vw, 26px);
 }
 
-.portfolio-sequence-section {
+.product-surfaces-section {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: #fbfaf6;
 }
 
-.portfolio-sequence-heading {
+.product-surfaces-heading {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(320px, 0.5fr);
   gap: clamp(24px, 5vw, 72px);
   align-items: end;
 }
 
-.portfolio-sequence-heading h2 {
+.product-surfaces-heading h2 {
   max-width: 760px;
   margin-top: 12px;
   color: var(--ink);
@@ -197,7 +197,7 @@ main {
   line-height: 0.98;
 }
 
-.portfolio-sequence-heading > p {
+.product-surfaces-heading > p {
   color: var(--muted);
   font-size: 16px;
 }
@@ -1577,7 +1577,7 @@ main {
 
 @media (max-width: 1100px) {
   .hero-grid,
-  .portfolio-sequence-heading,
+  .product-surfaces-heading,
   .surface-grid,
   .case-study-grid,
   .scenario-grid,

@@ -22,14 +22,14 @@ export type TrialSenseCase = {
 export const trialSenseProductBrief = [
   [
     'Primary user',
-    'Clinical operations, diligence, or venture teams reviewing whether a trial story is supported by the underlying protocol and feasibility evidence.',
+    'Clinical operations or diligence reviewers checking whether a trial story is supported by the underlying protocol and feasibility evidence.',
   ],
   [
     'Core job',
-    'Turn trial source material into a cautious, reviewable risk read before unsupported claims become investor-facing language.',
+    'Turn trial source material into a cautious, reviewable risk read before unsupported claims move into summary language.',
   ],
   [
-    'Operator edge',
+    'Workflow constraints',
     'The product treats eligibility criteria, site assumptions, monitoring burden, and governance gaps as real workflow constraints rather than generic AI summary fodder.',
   ],
 ] as const

@@ -1,26 +1,26 @@
 import { ArrowRight, Boxes, BrainCircuit, Stethoscope } from 'lucide-react'
 import { SignalBadge } from '../components/SignalBadge'
-import { portfolioSequence } from '../data/designSystemContent'
+import { productSurfaces } from '../data/designSystemContent'
 
 const sequenceIcons = [Boxes, BrainCircuit, Stethoscope] as const
 
-export function PortfolioSequenceSection() {
+export function ProductSurfacesSection() {
   return (
-    <section className="portfolio-sequence-section" id="portfolio-sequence">
-      <div className="portfolio-sequence-heading">
+    <section className="product-surfaces-section" id="product-surfaces">
+      <div className="product-surfaces-heading">
         <div>
-          <p className="eyebrow">Portfolio-ready product sequence</p>
-          <h2>Three finished surfaces, one coherent AI product story.</h2>
+          <p className="eyebrow">Product surfaces</p>
+          <h2>Three surfaces using the same AI review primitives.</h2>
         </div>
         <p>
-          The project now reads as a sequence: a reusable component foundation,
+          The app is organized as a sequence: a reusable component foundation,
           a model-behavior workflow, and a domain-specific clinical diligence
-          concept. Each phase proves a different layer of product judgment.
+          concept. Each surface exercises a different part of the review flow.
         </p>
       </div>
 
       <div className="sequence-grid">
-        {portfolioSequence.map((item, index) => {
+        {productSurfaces.map((item, index) => {
           const Icon = sequenceIcons[index]
 
           return (
@@ -37,7 +37,7 @@ export function PortfolioSequenceSection() {
               <h3>{item.title}</h3>
               <p>{item.body}</p>
               <div className="sequence-proof">
-                <strong>Portfolio proof</strong>
+                <strong>Implemented behavior</strong>
                 <p>{item.proof}</p>
               </div>
             </article>

@@ -69,30 +69,30 @@ export const reuseMap = [
   ],
 ] as const
 
-export const portfolioSequence = [
+export const productSurfaces = [
   {
-    phase: 'Phase 1',
+    phase: 'Surface 1',
     title: 'Human-AI Design System',
     status: 'Complete foundation',
     body: 'Reusable interface primitives for evidence, confidence, feedback, evaluation, comparison, agent progress, and review gates.',
     proof:
-      'Shows coded design-system thinking for AI products instead of a one-off mockup.',
+      'Exercises the shared evidence, confidence, feedback, eval, comparison, and review states.',
   },
   {
-    phase: 'Phase 2',
+    phase: 'Surface 2',
     title: 'Model Behavior Studio',
-    status: 'Complete product surface',
+    status: 'Complete workflow',
     body: 'A workspace for comparing candidate responses, tuning behavior prompts, scoring outputs, and exporting an eval note.',
     proof:
-      'Shows product judgment around model behavior, evaluation, and human-in-the-loop review.',
+      'Exercises prompt versioning, response selection, rubric scoring, reviewer feedback, and export preview.',
   },
   {
-    phase: 'Phase 3',
+    phase: 'Surface 3',
     title: 'TrialSense',
-    status: 'Complete domain concept',
+    status: 'Complete workflow',
     body: 'A clinical-trial diligence workbench for protocol intake, feasibility risk, source gaps, review gates, and investor-readable summaries.',
     proof:
-      'Shows how the same AI interface primitives can support healthcare diligence work grounded in operator experience.',
+      'Exercises source packets, missing-context questions, feasibility flags, review gates, and cautious summary output.',
   },
 ] as const
 

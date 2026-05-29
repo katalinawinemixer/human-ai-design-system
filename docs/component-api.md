@@ -1,6 +1,6 @@
 # Component API
 
-This is a lightweight reference for the current frontend primitives. The API is intentionally small because this is still a portfolio prototype, not a packaged component library.
+This is a lightweight reference for the current frontend primitives. The API is intentionally small because this is still a static prototype, not a packaged component library.
 
 ## CitationCard
 

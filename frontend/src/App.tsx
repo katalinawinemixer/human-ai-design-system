@@ -4,7 +4,7 @@ import { ComponentsSection } from './sections/ComponentsSection'
 import { HeroSection } from './sections/HeroSection'
 import { InventorySection } from './sections/InventorySection'
 import { ModelBehaviorStudioSection } from './sections/ModelBehaviorStudioSection'
-import { PortfolioSequenceSection } from './sections/PortfolioSequenceSection'
+import { ProductSurfacesSection } from './sections/ProductSurfacesSection'
 import { PrinciplesSection } from './sections/PrinciplesSection'
 import { ScenarioLibrarySection } from './sections/ScenarioLibrarySection'
 import { SpecificationsSection } from './sections/SpecificationsSection'
@@ -14,7 +14,7 @@ function App() {
   return (
     <main>
       <HeroSection />
-      <PortfolioSequenceSection />
+      <ProductSurfacesSection />
       <CaseStudySection />
       <ScenarioLibrarySection />
       <ModelBehaviorStudioSection />

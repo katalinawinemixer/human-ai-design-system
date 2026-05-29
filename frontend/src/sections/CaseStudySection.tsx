@@ -7,7 +7,7 @@ export function CaseStudySection() {
   return (
     <section className="case-study-section" id="case-study">
       <SectionHeader
-        eyebrow="Portfolio case study"
+        eyebrow="Case study"
         title="A design system for AI products where trust has to be earned."
         body="This project packages three connected surfaces: a reusable AI design system, a model-behavior evaluation studio, and a clinical-trial diligence workbench."
       />
@@ -16,16 +16,16 @@ export function CaseStudySection() {
         <article className="case-panel case-summary">
           <div className="component-heading">
             <ClipboardCheck size={20} />
-            <h3>What this proves</h3>
+            <h3>What is implemented</h3>
           </div>
           <p>
-            The system shows end-to-end AI product thinking: coded UI craft,
-            reusable components, uncertainty design, human feedback loops, and a
-            domain-specific point of view rooted in clinical operations.
+            The system includes reusable components, uncertainty states, human
+            feedback loops, eval views, and clinical examples that keep AI
+            output tied to source evidence.
           </p>
           <div className="proof-list">
             <span>Live React prototype</span>
-            <span>AI-native interaction states</span>
+            <span>AI review states</span>
             <span>Clinical diligence examples</span>
             <span>Reusable product foundation</span>
           </div>
@@ -52,7 +52,7 @@ export function CaseStudySection() {
           <article className="reuse-card" key={title}>
             <div>
               <SignalBadge tone={title === 'TrialSense' ? 'evidence' : 'good'}>
-                Product surface
+                Product workflow
               </SignalBadge>
               <h3>{title}</h3>
               <p>{body}</p>

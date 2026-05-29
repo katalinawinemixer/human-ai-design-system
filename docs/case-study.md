@@ -2,9 +2,9 @@
 
 ## Context
 
-This project is a coded design-system prototype for AI-native product interfaces. It focuses on interface patterns that make model behavior easier to inspect: evidence, confidence, uncertainty, feedback, evaluation, prompt history, comparison, and human review.
+This project is a coded design-system prototype for AI product interfaces. It focuses on interface patterns that make model behavior easier to inspect: evidence, confidence, uncertainty, feedback, evaluation, prompt history, comparison, and human review.
 
-The system now supports a completed three-phase portfolio sequence:
+The prototype currently includes three connected surfaces:
 
 - **Human-AI Design System**: reusable AI interface primitives for evidence, uncertainty, feedback, evaluation, comparison, agent activity, and review.
 - **Model Behavior Studio**: a workspace for comparing, scoring, and tuning AI response behavior.
@@ -44,20 +44,20 @@ The current app includes:
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
-The Phase 2 Model Behavior Studio turns the component system into a product workflow. It shows how a reviewer can edit a behavior prompt, save a prompt version, compare candidate responses, choose the winning behavior, score the output, and generate a downloadable eval report. This demonstrates model-behavior judgment as an interface problem: the product is not only displaying AI output, it is helping a human decide which behavior should be trusted, tuned, or blocked.
+Model Behavior Studio turns the component system into a product workflow. It lets a reviewer edit a behavior prompt, save a prompt version, compare candidate responses, choose the winning behavior, score the output, and generate a downloadable eval report.
 
-The Phase 3 TrialSense baseline applies the same primitives to clinical-trial diligence. It translates protocol intake into feasibility risk, eligibility pressure, missing-context questions, source-backed evidence, source packet completeness, downloadable diligence output, and investor-readable summary language.
+TrialSense applies the same primitives to clinical-trial diligence. It translates protocol intake into feasibility risk, eligibility pressure, missing-context questions, source-backed evidence, source packet completeness, downloadable diligence output, and cautious summary language.
 
-## What This Demonstrates
+## Implemented Capabilities
 
-- Coded prototyping in React and TypeScript
-- Design-system thinking for AI-specific interface needs
-- Product judgment around trust, confidence, and review
-- Model-behavior thinking beyond generic chatbot UI
+- React and TypeScript frontend with static fixtures and local UI state
+- Reusable patterns for AI-specific interface needs
+- Trust, confidence, evidence, and review states
+- Model-behavior review beyond generic chatbot UI
 - Organized documentation that turns UI ideas into reusable product rules
-- Component states that can be reused in later product prototypes
+- Component states that can be reused in related product workflows
 - Scenario examples that show the system is not limited to one domain
-- A domain-specific point of view grounded in clinical-trial operations
+- Clinical-trial examples grounded in eligibility, feasibility, and source-review constraints
 
 ## Next Iterations
 

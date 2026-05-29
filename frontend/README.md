@@ -37,9 +37,9 @@ The built files are published to the repository's `gh-pages` branch.
 
 ```text
 Hero                 AI review workspace preview
-Portfolio case study What the system proves and how it supports future projects
+Case study           Implementation notes and current product surfaces
 System intent        Design principles around trust, confidence, and evaluation
-Component library    Reusable AI-native interface patterns
+Component library    Reusable AI interface patterns
 ```
 
 ## Source Structure

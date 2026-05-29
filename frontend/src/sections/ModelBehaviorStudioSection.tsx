@@ -150,9 +150,9 @@ export function ModelBehaviorStudioSection() {
   return (
     <section className="model-studio-section" id="model-studio">
       <SectionHeader
-        eyebrow="Phase 2"
+        eyebrow="Model review workflow"
         title="Model Behavior Studio turns primitives into a tuning workflow."
-        body="The first product surface compares candidate responses, scores behavior against a rubric, tracks prompt versions, and packages the reviewer decision into an eval report."
+        body="This surface compares candidate responses, scores behavior against a rubric, tracks prompt versions, and packages the reviewer decision into an eval report."
       />
 
       <div className="studio-shell">

@@ -2,10 +2,10 @@
 
 This backlog captures future polish ideas without leaving them as open GitHub Issues. The current app baseline is complete; these are optional next moves.
 
-## Portfolio Polish
+## Documentation and Demo Polish
 
-- Record a concise 60-90 second walkthrough that shows the hero, portfolio sequence, Model Behavior Studio, and TrialSense.
-- Tighten the public case-study narrative as the portfolio story evolves.
+- Record a concise 60-90 second walkthrough that shows the hero, product surfaces, Model Behavior Studio, and TrialSense.
+- Tighten the public case-study narrative as the implemented workflows evolve.
 - Refresh screenshots and the demo GIF when visible UI changes.
 
 ## TrialSense
@@ -20,7 +20,7 @@ This backlog captures future polish ideas without leaving them as open GitHub Is
 
 ## Backend Threshold
 
-No backend is needed for the current portfolio baseline.
+No backend is needed for the current static prototype.
 
 Consider backend work only if the project needs:
 
@@ -31,7 +31,7 @@ Consider backend work only if the project needs:
 - Model-provider calls
 - Audit trails
 
-Until one of those becomes part of the product story, keep TrialSense as a static frontend prototype with local UI state and downloadable text artifacts.
+Until one of those becomes part of the implemented workflow, keep TrialSense as a static frontend prototype with local UI state and downloadable text artifacts.
 
 ## Screenshot Maintenance
 
@@ -40,14 +40,14 @@ Screenshots live in `docs/assets/screenshots/`.
 Current screenshot set:
 
 - `hero.png`
-- `portfolio-sequence.png`
+- `product-surfaces.png`
 - `system-specs.png`
 - `scenario-library.png`
 - `model-behavior-studio.png`
 - `trialsense.png`
 - `visual-inventory.png`
 - `mobile-hero.png`
-- `mobile-portfolio-sequence.png`
+- `mobile-product-surfaces.png`
 - `mobile-scenario-library.png`
 - `mobile-model-behavior-studio.png`
 - `mobile-trialsense.png`

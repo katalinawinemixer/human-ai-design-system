@@ -71,9 +71,9 @@ export function TrialSenseSection() {
   return (
     <section className="trialsense-section" id="trialsense">
       <SectionHeader
-        eyebrow="Phase 3"
+        eyebrow="Clinical diligence workflow"
         title="TrialSense turns source-grounded primitives into a diligence workbench."
-        body="The first TrialSense surface reviews protocol text for feasibility risk, missing context, eligibility pressure, and investor-ready diligence language."
+        body="The TrialSense surface reviews protocol text for feasibility risk, missing context, eligibility pressure, and cautious diligence summary language."
       />
 
       <div className="trialsense-product-brief">

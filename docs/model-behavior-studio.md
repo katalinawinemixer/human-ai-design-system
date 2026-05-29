@@ -1,6 +1,6 @@
 # Model Behavior Studio
 
-Model Behavior Studio is Phase 2 of the portfolio sequence. It turns the reusable Human-AI Design System primitives into a product workflow for comparing, scoring, and tuning model response behavior.
+Model Behavior Studio turns the reusable Human-AI Design System primitives into a product workflow for comparing, scoring, and tuning model response behavior.
 
 ## Current Surface
 
@@ -23,7 +23,7 @@ It includes:
 
 ## Product Intent
 
-The studio is meant to show model-behavior judgment, not just UI craft. The interface makes it possible to ask:
+The studio makes model behavior reviewable. The interface makes it possible to ask:
 
 - Which response should become the preferred behavior?
 - Does the answer stay grounded in source evidence?
@@ -33,7 +33,7 @@ The studio is meant to show model-behavior judgment, not just UI craft. The inte
 
 ## Backend Decision
 
-No backend is needed for the current Phase 2 portfolio baseline. Local state is enough to demonstrate the product workflow: edit a prompt, save a version, choose a winning response, and generate an export preview.
+No backend is needed for the current static prototype. Local state is enough to support the workflow: edit a prompt, save a version, choose a winning response, and generate an export preview.
 
 The reserved `backend/` folder should stay empty until the project needs durable saved evals, authenticated profile storage, real report downloads, or model-provider integrations.
 

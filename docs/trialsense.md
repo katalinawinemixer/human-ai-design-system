@@ -1,10 +1,10 @@
 # TrialSense
 
-TrialSense is Phase 3 of the portfolio sequence. It turns the source-grounding and review primitives into a clinical-trial diligence workbench for feasibility, eligibility, missing context, and investor-facing risk language.
+TrialSense turns the source-grounding and review primitives into a clinical-trial diligence workbench for feasibility, eligibility, missing context, and cautious risk language.
 
 ## Product Concept
 
-TrialSense is positioned as a focused diligence workbench for people who need to pressure-test the story around a clinical trial before that story becomes investment, portfolio, or operating language.
+TrialSense is a focused diligence workbench for people who need to pressure-test the story around a clinical trial before unsupported claims move into summary or operating language.
 
 Primary users:
 
@@ -39,21 +39,21 @@ It includes:
 
 ## Product Intent
 
-TrialSense is meant to show domain-specific AI product judgment. The interface makes it possible to ask:
+TrialSense makes domain-specific review decisions inspectable. The interface makes it possible to ask:
 
 - Which trial claims are directly supported by the source set?
 - Which feasibility assumptions are inferred or unsupported?
 - What missing context should a reviewer request before accepting the sponsor narrative?
-- How should operational risk be translated into investor-readable diligence language?
+- How should operational risk be translated into cautious diligence language?
 - Where should the system stop and require human review?
 
 ## Current Backend Decision
 
-No backend is needed for the current TrialSense portfolio baseline. Static fixtures, local UI state, and a downloadable text artifact are enough to demonstrate the diligence workflow, state model, and reuse of the Phase 1 primitives.
+No backend is needed for the current static prototype. Static fixtures, local UI state, and a downloadable text artifact are enough to support the diligence workflow, state model, and reuse of the shared primitives.
 
 The reserved `backend/` folder should remain available for future trial document upload, source parsing, saved diligence reviews, or model-provider integration.
 
-## Future Phase 3 Polish
+## Future Polish
 
 - Refresh screenshots when TrialSense changes.
 - Add persistence only if saved review history becomes part of the product story.

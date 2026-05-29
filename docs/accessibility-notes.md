@@ -1,6 +1,6 @@
 # Accessibility Notes
 
-These notes keep the design-system primitives usable as the portfolio grows into follow-on product prototypes.
+These notes keep the design-system primitives usable as the prototype grows into additional product surfaces.
 
 ## Current Expectations
 

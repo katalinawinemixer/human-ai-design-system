@@ -24,8 +24,8 @@ export function HeroSection() {
           <a href="#case-study">
             Case study <ChevronRight size={16} />
           </a>
-          <a href="#portfolio-sequence">
-            Sequence <ChevronRight size={16} />
+          <a href="#product-surfaces">
+            Surfaces <ChevronRight size={16} />
           </a>
           <a href="#scenarios">
             Scenarios <ChevronRight size={16} />
@@ -55,14 +55,14 @@ export function HeroSection() {
           <p>
             A reusable component system for source-grounded answers,
             uncertainty, human feedback, evals, and agent progress. Built as
-            the foundation for future AI product prototypes.
+            the foundation for related AI product workflows.
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#portfolio-sequence">
-              View sequence <ArrowRight size={16} />
+            <a className="primary-action" href="#product-surfaces">
+              View surfaces <ArrowRight size={16} />
             </a>
             <a className="secondary-action" href="#case-study">
-              Portfolio story
+              Implementation notes
             </a>
           </div>
           <div className="scenario-switcher" aria-label="Preview scenario">

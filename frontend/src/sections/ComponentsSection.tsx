@@ -24,7 +24,7 @@ export function ComponentsSection() {
     <section className="components-section" id="components">
       <SectionHeader
         eyebrow="Component library"
-        title="Reusable patterns for AI-native workflows."
+        title="Reusable patterns for AI review workflows."
         body="This first pass focuses on the pieces we will reuse in Model Behavior Studio and TrialSense."
       />
 

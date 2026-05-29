@@ -1,12 +1,12 @@
 # Project Roadmap
 
-This roadmap keeps the portfolio system organized as it grows. The current repo is the shared foundation; follow-on work should reuse its patterns instead of becoming scattered one-off prototypes.
+This roadmap keeps the prototype organized as it grows. The current repo is the shared foundation; follow-on work should reuse its patterns instead of becoming scattered one-off screens.
 
 ## Phase 1: Human-AI Design System
 
 Status: complete
 
-Goal: build and document reusable AI-native interface primitives.
+Goal: build and document reusable AI interface primitives.
 
 Completed scope:
 
@@ -20,7 +20,7 @@ Completed scope:
 - Human review banner
 - Component specification section with jobs, states, and reuse paths
 - Visual inventory section for component state examples
-- README showcase with screenshots from the live prototype
+- README screenshots from the live prototype
 - Scenario library with clinical diligence, model-behavior review, and research synthesis examples
 - Interactive hero scenario switcher
 - Component API reference
@@ -57,9 +57,9 @@ Completed so far:
 - Generated export preview for the active behavior profile
 - Downloadable `.txt` export artifact
 - Desktop and mobile README screenshots for the studio surface
-- Backend decision: no backend required for this portfolio baseline
+- Backend decision: no backend required for this static prototype
 
-Future Phase 2 polish:
+Future polish:
 
 - Refresh screenshots when the studio surface changes.
 - Add persistence only if saved eval history becomes important enough to justify backend scope.
@@ -89,16 +89,16 @@ Completed so far:
 - Fuller trial source packet view
 - Downloadable `.txt` diligence summary output
 - Mobile README screenshot
-- Backend decision: no backend required for this portfolio baseline
+- Backend decision: no backend required for this static prototype
 
-Future Phase 3 polish:
+Future polish:
 
 - Refresh screenshots when TrialSense changes.
 - Add persistence only if saved review history becomes important enough to justify backend scope.
 
 ## Future Backlog
 
-Future work after the three completed phases is tracked in `docs/future-backlog.md` so the public GitHub Issues count does not make optional polish look like defects.
+Future work after the three completed surfaces is tracked in `docs/future-backlog.md` so the public GitHub Issues count does not make optional polish look like defects.
 
 Use GitHub Issues only for active bugs, active implementation tasks, or scoped work that is ready to be picked up immediately.
 
@@ -107,7 +107,7 @@ Use GitHub Issues only for active bugs, active implementation tasks, or scoped w
 - Keep root-level files minimal and high-level.
 - Keep runnable app code inside `frontend/`.
 - Keep future API and data-service work inside `backend/`.
-- Keep case-study, roadmap, and portfolio notes inside `docs/`.
+- Keep case-study, roadmap, and implementation notes inside `docs/`.
 - Add new UI primitives under `frontend/src/components/`.
 - Add page-level sections under `frontend/src/sections/`.
 - Add static content and examples under `frontend/src/data/`.

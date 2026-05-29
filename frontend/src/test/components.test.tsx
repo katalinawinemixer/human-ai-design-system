@@ -206,7 +206,7 @@ describe('PromptHistory', () => {
 describe('TrialSenseSection', () => {
   it('renders the section header eyebrow', () => {
     render(<TrialSenseSection />)
-    expect(screen.getByText('Phase 3')).toBeInTheDocument()
+    expect(screen.getByText('Clinical diligence workflow')).toBeInTheDocument()
   })
 
   it('renders the first trial case by default', () => {
