@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "i-m-looking-at-a-role",
+      "name": "human-ai-design-system-frontend",
       "dependencies": {
         "lucide-react": "^1.16.0",
         "react": "^19.2.6",

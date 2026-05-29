@@ -40,7 +40,7 @@ The current app includes:
 - Visual inventory section for checking component states
 - Scenario library with clinical diligence, model-behavior review, and research synthesis examples
 - Model Behavior Studio for behavior comparison, prompt iteration, scoring, and export
-- TrialSense for protocol intake, risk flags, missing context, source packet status, evidence trails, downloadable output, and investor diligence summaries
+- TrialSense for protocol intake, risk flags, missing context, source packet status, evidence trails, downloadable output, and cautious diligence summaries
 
 The example content uses clinical-trial diligence scenarios because they connect the interface patterns to real operational judgment: eligibility criteria, feasibility assumptions, source evidence, and claims that should be softened or reviewed.
 
@@ -62,4 +62,4 @@ TrialSense applies the same primitives to clinical-trial diligence. It translate
 ## Next Iterations
 
 - Refresh screenshots when product surfaces change.
-- Add persistence only if saved TrialSense review history becomes part of the product story.
+- Add persistence only if saved TrialSense review history becomes part of the implemented workflow.

@@ -4,7 +4,7 @@ main {
 
 .hero-section,
 .product-surfaces-section,
-.case-study-section,
+.system-overview-section,
 .scenario-section,
 .model-studio-section,
 .trialsense-section,
@@ -487,7 +487,7 @@ main {
 }
 
 .principles-section,
-.case-study-section,
+.system-overview-section,
 .scenario-section,
 .model-studio-section,
 .trialsense-section,
@@ -1311,25 +1311,25 @@ main {
   gap: 10px;
 }
 
-.case-study-grid {
+.system-overview-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 16px;
   margin-top: 32px;
 }
 
-.case-panel,
+.overview-panel,
 .reuse-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
 }
 
-.case-panel {
+.overview-panel {
   padding: 18px;
 }
 
-.case-summary p,
+.overview-summary p,
 .decision-row p,
 .reuse-card p,
 .reuse-primitives p {
@@ -1337,7 +1337,7 @@ main {
   font-size: 14px;
 }
 
-.case-summary > p {
+.overview-summary > p {
   max-width: 660px;
 }
 
@@ -1579,7 +1579,7 @@ main {
   .hero-grid,
   .product-surfaces-heading,
   .surface-grid,
-  .case-study-grid,
+  .system-overview-grid,
   .scenario-grid,
   .studio-shell,
   .trialsense-shell,

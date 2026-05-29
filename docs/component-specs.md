@@ -6,7 +6,7 @@ This document keeps the Human-AI Design System organized as a reusable product f
 
 | Component | Job | Core states | Reuse path |
 | --- | --- | --- | --- |
-| Source citation card | Attach important claims to source context, confidence, and evidence tone. | Supported, inferred, needs source | TrialSense claim review, investor memo evidence trails, answer provenance |
+| Source citation card | Attach important claims to source context, confidence, and evidence tone. | Supported, inferred, needs source | TrialSense claim review, diligence note evidence trails, answer provenance |
 | Confidence meter | Explain what the system knows, where it is extrapolating, and why the answer should be trusted cautiously. | High, moderate, low, blocked | Clinical feasibility scoring, model response calibration, risk review |
 | Human feedback control | Capture user judgment as structured signal instead of a generic reaction. | Useful, speculative, unhelpful | Behavior tuning loops, eval dataset collection, reviewer triage |
 | Agent activity timeline | Show work in progress so users can inspect what has been read, checked, or deferred. | Complete, active, waiting, error | Research agents, diligence workflows, source ingestion status |

@@ -21,8 +21,8 @@ export function HeroSection() {
           <span>Human-AI Design System</span>
         </div>
         <div className="topbar-links">
-          <a href="#case-study">
-            Case study <ChevronRight size={16} />
+          <a href="#system-overview">
+            Overview <ChevronRight size={16} />
           </a>
           <a href="#product-surfaces">
             Surfaces <ChevronRight size={16} />
@@ -61,8 +61,8 @@ export function HeroSection() {
             <a className="primary-action" href="#product-surfaces">
               View surfaces <ArrowRight size={16} />
             </a>
-            <a className="secondary-action" href="#case-study">
-              Implementation notes
+            <a className="secondary-action" href="#system-overview">
+              System overview
             </a>
           </div>
           <div className="scenario-switcher" aria-label="Preview scenario">

@@ -2,9 +2,9 @@
 
 This roadmap keeps the prototype organized as it grows. The current repo is the shared foundation; follow-on work should reuse its patterns instead of becoming scattered one-off screens.
 
-## Phase 1: Human-AI Design System
+## Surface 1: Human-AI Design System
 
-Status: complete
+Status: current static prototype implemented
 
 Goal: build and document reusable AI interface primitives.
 
@@ -30,9 +30,9 @@ Completed scope:
 - Accessibility notes for keyboard behavior, labels, contrast, and review states
 - Mobile README screenshots
 
-## Phase 2: Model Behavior Studio
+## Surface 2: Model Behavior Studio
 
-Status: complete
+Status: current static prototype implemented
 
 Goal: create a product prototype for comparing, scoring, and tuning AI response behavior.
 
@@ -64,9 +64,9 @@ Future polish:
 - Refresh screenshots when the studio surface changes.
 - Add persistence only if saved eval history becomes important enough to justify backend scope.
 
-## Phase 3: TrialSense
+## Surface 3: TrialSense
 
-Status: complete
+Status: current static prototype implemented
 
 Goal: create a clinical-trial diligence workbench grounded in source evidence and operational risk.
 
@@ -98,7 +98,7 @@ Future polish:
 
 ## Future Backlog
 
-Future work after the three completed surfaces is tracked in `docs/future-backlog.md` so the public GitHub Issues count does not make optional polish look like defects.
+Future work after the three current surfaces is tracked in `docs/future-backlog.md` so the public GitHub Issues count does not make optional polish look like defects.
 
 Use GitHub Issues only for active bugs, active implementation tasks, or scoped work that is ready to be picked up immediately.
 

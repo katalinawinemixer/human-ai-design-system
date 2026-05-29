@@ -9,7 +9,7 @@ TrialSense is a focused diligence workbench for people who need to pressure-test
 Primary users:
 
 - Clinical operations teams checking whether the proposed enrollment or startup plan is realistic.
-- Healthcare investors or platform teams reviewing operational risk during diligence.
+- Diligence reviewers checking operational risk before summary language is reused.
 - Product and research teams exploring how AI interfaces can keep clinical claims tied to source evidence.
 
 Core job:
@@ -33,7 +33,7 @@ It includes:
 - Fuller source packet view for attached, partial, and missing diligence inputs.
 - Evidence trail using source citation cards.
 - Missing-context questions with reviewer checkoff state.
-- Investor diligence summary with feasibility, eligibility, and investor note rows.
+- Diligence summary with feasibility, eligibility, and note rows.
 - Downloadable `.txt` diligence summary output for the active trial case.
 - Human review gate for claims that should not move into memo language yet.
 
@@ -56,4 +56,4 @@ The reserved `backend/` folder should remain available for future trial document
 ## Future Polish
 
 - Refresh screenshots when TrialSense changes.
-- Add persistence only if saved review history becomes part of the product story.
+- Add persistence only if saved review history becomes part of the implemented workflow.

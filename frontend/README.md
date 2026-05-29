@@ -37,8 +37,14 @@ The built files are published to the repository's `gh-pages` branch.
 
 ```text
 Hero                 AI review workspace preview
-Case study           Implementation notes and current product surfaces
-System intent        Design principles around trust, confidence, and evaluation
+Product surfaces     Component foundation, model review, and TrialSense
+System overview      Implementation notes and reuse rationale
+Scenario library     Example data across review workflows
+Model Behavior Studio Response comparison and eval report workflow
+TrialSense           Clinical-trial diligence workflow
+System intent        Design principles around trust, confidence, and review
+Component specs      Component jobs, states, and reuse paths
+Visual inventory     Component state examples
 Component library    Reusable AI interface patterns
 ```
 

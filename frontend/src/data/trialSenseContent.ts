@@ -47,13 +47,13 @@ export const trialSenseCases = [
       'Eligibility risk is visible, but enrollment confidence depends on site mix and historical screen-failure data that is not attached.',
     reviewTitle: 'Human review required',
     reviewBody:
-      'The feasibility claim should not move into an investor memo until screen-failure assumptions and site mix are checked.',
+      'The feasibility claim should not move into a diligence note until screen-failure assumptions and site mix are checked.',
     actionLabel: 'Review',
     timeline: [
       ['Protocol intake parsed', 'Complete', 'done'],
       ['Eligibility risks flagged', '4 flags', 'done'],
       ['Screen-failure evidence', 'Missing source', 'active'],
-      ['Investor memo summary', 'Waiting for review', 'waiting'],
+      ['Diligence summary', 'Waiting for review', 'waiting'],
     ],
     citations: [
       {

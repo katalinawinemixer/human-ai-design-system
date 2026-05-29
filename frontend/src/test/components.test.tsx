@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import App from '../App'
 import { AgentTimeline } from '../components/AgentTimeline'
 import { CitationCard } from '../components/CitationCard'
 import { ComparisonWorkspace } from '../components/ComparisonWorkspace'
@@ -11,6 +12,21 @@ import { ReviewBanner } from '../components/ReviewBanner'
 import { SectionHeader } from '../components/SectionHeader'
 import { SignalBadge } from '../components/SignalBadge'
 import { TrialSenseSection } from '../sections/TrialSenseSection'
+
+describe('App', () => {
+  it('renders the current major page sections', () => {
+    const { container } = render(<App />)
+
+    expect(container.querySelector('#product-surfaces')).toBeInTheDocument()
+    expect(container.querySelector('#system-overview')).toBeInTheDocument()
+    expect(container.querySelector('#scenarios')).toBeInTheDocument()
+    expect(container.querySelector('#model-studio')).toBeInTheDocument()
+    expect(container.querySelector('#trialsense')).toBeInTheDocument()
+    expect(container.querySelector('#specs')).toBeInTheDocument()
+    expect(container.querySelector('#inventory')).toBeInTheDocument()
+    expect(container.querySelector('#components')).toBeInTheDocument()
+  })
+})
 
 describe('SignalBadge', () => {
   it('renders children', () => {

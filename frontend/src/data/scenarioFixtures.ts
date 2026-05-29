@@ -22,7 +22,7 @@ export const scenarioFixtures = [
   {
     title: 'Clinical-trial diligence',
     context:
-      'Review trial feasibility and eligibility risk before the output becomes an investor-facing note.',
+      'Review trial feasibility and eligibility risk before the output becomes a reusable diligence note.',
     question: 'Can this claim be used in a diligence memo?',
     confidence: 'Moderate-high',
     confidenceValue: 76,

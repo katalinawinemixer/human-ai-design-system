@@ -1,5 +1,4 @@
 import './App.css'
-import { CaseStudySection } from './sections/CaseStudySection'
 import { ComponentsSection } from './sections/ComponentsSection'
 import { HeroSection } from './sections/HeroSection'
 import { InventorySection } from './sections/InventorySection'
@@ -8,6 +7,7 @@ import { ProductSurfacesSection } from './sections/ProductSurfacesSection'
 import { PrinciplesSection } from './sections/PrinciplesSection'
 import { ScenarioLibrarySection } from './sections/ScenarioLibrarySection'
 import { SpecificationsSection } from './sections/SpecificationsSection'
+import { SystemOverviewSection } from './sections/SystemOverviewSection'
 import { TrialSenseSection } from './sections/TrialSenseSection'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <main>
       <HeroSection />
       <ProductSurfacesSection />
-      <CaseStudySection />
+      <SystemOverviewSection />
       <ScenarioLibrarySection />
       <ModelBehaviorStudioSection />
       <TrialSenseSection />

@@ -3,17 +3,17 @@ import { SectionHeader } from '../components/SectionHeader'
 import { SignalBadge } from '../components/SignalBadge'
 import { designDecisions, reuseMap } from '../data/designSystemContent'
 
-export function CaseStudySection() {
+export function SystemOverviewSection() {
   return (
-    <section className="case-study-section" id="case-study">
+    <section className="system-overview-section" id="system-overview">
       <SectionHeader
-        eyebrow="Case study"
+        eyebrow="System overview"
         title="A design system for AI products where trust has to be earned."
         body="This project packages three connected surfaces: a reusable AI design system, a model-behavior evaluation studio, and a clinical-trial diligence workbench."
       />
 
-      <div className="case-study-grid">
-        <article className="case-panel case-summary">
+      <div className="system-overview-grid">
+        <article className="overview-panel overview-summary">
           <div className="component-heading">
             <ClipboardCheck size={20} />
             <h3>What is implemented</h3>
@@ -31,7 +31,7 @@ export function CaseStudySection() {
           </div>
         </article>
 
-        <article className="case-panel">
+        <article className="overview-panel">
           <div className="component-heading">
             <Scale size={20} />
             <h3>Design decisions</h3>

@@ -64,7 +64,7 @@ export const reuseMap = [
   ],
   [
     'TrialSense',
-    'Review clinical-trial source material for feasibility, evidence gaps, and investor-relevant operational risk.',
+    'Review clinical-trial source material for feasibility, evidence gaps, and diligence-relevant operational risk.',
     'Citation cards, confidence meter, human review banner, agent timeline',
   ],
 ] as const
@@ -73,7 +73,7 @@ export const productSurfaces = [
   {
     phase: 'Surface 1',
     title: 'Human-AI Design System',
-    status: 'Complete foundation',
+    status: 'Foundation implemented',
     body: 'Reusable interface primitives for evidence, confidence, feedback, evaluation, comparison, agent progress, and review gates.',
     proof:
       'Exercises the shared evidence, confidence, feedback, eval, comparison, and review states.',
@@ -81,7 +81,7 @@ export const productSurfaces = [
   {
     phase: 'Surface 2',
     title: 'Model Behavior Studio',
-    status: 'Complete workflow',
+    status: 'Static workflow implemented',
     body: 'A workspace for comparing candidate responses, tuning behavior prompts, scoring outputs, and exporting an eval note.',
     proof:
       'Exercises prompt versioning, response selection, rubric scoring, reviewer feedback, and export preview.',
@@ -89,8 +89,8 @@ export const productSurfaces = [
   {
     phase: 'Surface 3',
     title: 'TrialSense',
-    status: 'Complete workflow',
-    body: 'A clinical-trial diligence workbench for protocol intake, feasibility risk, source gaps, review gates, and investor-readable summaries.',
+    status: 'Static workflow implemented',
+    body: 'A clinical-trial diligence workbench for protocol intake, feasibility risk, source gaps, review gates, and cautious summaries.',
     proof:
       'Exercises source packets, missing-context questions, feasibility flags, review gates, and cautious summary output.',
   },
@@ -103,7 +103,7 @@ export const componentSpecs = [
     name: 'Source citation card',
     role: 'Keeps each meaningful claim attached to source context, confidence, and evidence tone.',
     states: ['Supported', 'Inferred', 'Needs source'],
-    reuse: 'TrialSense claim review, investor memo evidence trails, answer provenance.',
+    reuse: 'TrialSense claim review, diligence note evidence trails, answer provenance.',
   },
   {
     name: 'Confidence meter',
@@ -258,7 +258,7 @@ export const inventoryPromptStates = [
   ],
   [
     ['v2', 'Compare answer tone for operator audience', true],
-    ['v1', 'Generate an investor-style diligence note', false],
+    ['v1', 'Generate a diligence note', false],
   ],
   [
     ['v1', 'Draft answer without source gating', false],

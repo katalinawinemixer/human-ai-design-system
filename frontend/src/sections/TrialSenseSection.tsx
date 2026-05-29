@@ -210,7 +210,7 @@ export function TrialSenseSection() {
           <div className="trial-panel">
             <div className="studio-panel-heading">
               <ClipboardList size={18} />
-              <strong>Investor diligence summary</strong>
+              <strong>Diligence summary</strong>
             </div>
             <div className="summary-rows">
               {activeCase.summaryRows.map(([label, value]) => (

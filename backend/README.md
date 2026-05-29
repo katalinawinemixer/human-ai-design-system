@@ -10,7 +10,7 @@ Prompt and response version history
 Model behavior scoring data
 Feedback event capture
 Source-document metadata
-Exportable case-study or eval reports
+Exportable review notes or eval reports
 ```
 
 ## Current Status

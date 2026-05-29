@@ -8,7 +8,7 @@ type ReviewBannerProps = {
 
 export function ReviewBanner({
   title = 'Human review required',
-  body = 'Two claims are inferred from analog studies and should be checked before inclusion in an investor memo.',
+  body = 'Two claims are inferred from analog studies and should be checked before inclusion in a diligence note.',
   actionLabel = 'Review',
 }: ReviewBannerProps) {
   return (

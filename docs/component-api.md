@@ -14,7 +14,7 @@ Props:
 | `citation.source` | `string` | Source label shown in the card metadata |
 | `citation.quote` | `string` | Supporting evidence or review note |
 | `citation.confidence` | `string` | Human-readable confidence label |
-| `citation.tone` | `'evidence' \| 'caution'` | Visual treatment for supported versus cautionary evidence |
+| `citation.tone` | `'evidence' \| 'warn'` | Visual treatment for supported versus cautionary evidence |
 
 ## ConfidenceMeter
 

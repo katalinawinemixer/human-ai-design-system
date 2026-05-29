@@ -41,6 +41,10 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 
 ![Human-AI Design System hero interface](docs/assets/screenshots/hero.png)
 
+### Product Surfaces
+
+![Three product surfaces using the same AI review primitives](docs/assets/screenshots/product-surfaces.png)
+
 ### Component Specs
 
 ![Component specs with jobs, states, and reuse paths](docs/assets/screenshots/system-specs.png)
@@ -66,6 +70,8 @@ The demo is deployed from `frontend/` through GitHub Actions and GitHub Pages.
 ![Mobile view of TrialSense](docs/assets/screenshots/mobile-trialsense.png)
 
 ![Mobile view of the Human-AI Design System hero](docs/assets/screenshots/mobile-hero.png)
+
+![Mobile view of the product surfaces](docs/assets/screenshots/mobile-product-surfaces.png)
 
 ![Mobile view of the scenario library](docs/assets/screenshots/mobile-scenario-library.png)
 
