@@ -112,7 +112,7 @@ If that port is busy, Vite will choose the next available local port.
 
 ## Verification
 
-From the frontend folder:
+From the repository root:
 
 ```bash
 cd frontend
@@ -120,6 +120,8 @@ bun run lint
 bun run test
 bun run build
 ```
+
+If your terminal is already inside `frontend/`, skip `cd frontend`.
 
 GitHub Actions also runs frontend lint and build checks on pushes and pull requests.
 

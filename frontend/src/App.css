@@ -381,6 +381,7 @@ main {
 
 .start-card p,
 .run-locally-panel pre,
+.run-locally-note,
 .catalog-card p,
 .state-pattern-card p,
 .motion-principles p,
@@ -390,8 +391,22 @@ main {
 }
 
 .start-card p,
+.run-locally-note,
 .resource-card p {
   margin-top: 8px;
+}
+
+.run-locally-note {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.run-locally-note code {
+  border-radius: 6px;
+  padding: 2px 5px;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 .start-card > span {

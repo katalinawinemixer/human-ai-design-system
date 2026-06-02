@@ -31,7 +31,11 @@ export function GetStartedSection() {
           <TerminalSquare size={20} />
           <h3>Run locally</h3>
         </div>
-        <pre>{`cd frontend
+        <p className="run-locally-note">
+          Clone the repo, then run these commands from the repository root. If your terminal is
+          already inside <code>frontend/</code>, skip the first line.
+        </p>
+        <pre>{`cd human-ai-design-system/frontend
 bun install
 bun dev`}</pre>
       </div>

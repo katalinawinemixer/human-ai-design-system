@@ -17,6 +17,7 @@ import {
   navigationItems,
   resourceLinks,
 } from '../data/designSystemContent'
+import { GetStartedSection } from '../sections/GetStartedSection'
 import { StatesMotionSection } from '../sections/StatesMotionSection'
 import { TrialSenseSection } from '../sections/TrialSenseSection'
 
@@ -63,6 +64,17 @@ describe('App', () => {
       )
       expect(resource.href).toContain('/docs/')
     })
+  })
+})
+
+describe('GetStartedSection', () => {
+  it('shows local setup commands that work from a fresh clone parent directory', () => {
+    render(<GetStartedSection />)
+
+    expect(screen.getByText(/run these commands from the repository root/i)).toBeInTheDocument()
+    expect(screen.getByText(/already inside/i)).toHaveTextContent('skip the first line')
+    expect(screen.getByText(/cd human-ai-design-system\/frontend/)).toBeInTheDocument()
+    expect(screen.queryByText(/^cd frontend$/)).not.toBeInTheDocument()
   })
 })
 
