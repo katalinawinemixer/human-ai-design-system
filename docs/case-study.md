@@ -66,6 +66,10 @@ TrialSense applies the same primitives to clinical-trial diligence. It translate
 - Scenario examples that show the system is not limited to one domain
 - Clinical-trial examples grounded in eligibility, feasibility, and source-review constraints
 
+## Public Quality Guardrails
+
+The repo treats public developer onboarding as part of the product experience. The local-run command block is shared between the site and tests, README instructions are checked against the site copy, and CI runs a clean-copy smoke test that starts from the documented public setup path. This prevents a visitor from hitting a broken “run it locally” flow after finding the deployed portfolio project.
+
 ## Next Iterations
 
 - Refresh screenshots when product surfaces change.
