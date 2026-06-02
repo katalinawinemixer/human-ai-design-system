@@ -33,3 +33,7 @@ jobs:
 
       - name: Build
         run: bun run build
+
+      - name: Public setup smoke test
+        working-directory: .
+        run: TMPDIR=/tmp scripts/verify-public-setup.sh

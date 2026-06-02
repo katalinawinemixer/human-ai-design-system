@@ -1,6 +1,7 @@
 import { ArrowRight, TerminalSquare } from 'lucide-react'
 import { SectionHeader } from '../components/SectionHeader'
 import { getStartedPaths } from '../data/designSystemContent'
+import { localRunCommandBlock, localRunInstructions } from '../data/localRunInstructions'
 
 export function GetStartedSection() {
   return (
@@ -32,12 +33,9 @@ export function GetStartedSection() {
           <h3>Run locally</h3>
         </div>
         <p className="run-locally-note">
-          Clone the repo, then run these commands from the repository root. If your terminal is
-          already inside <code>frontend/</code>, skip the first line.
+          {localRunInstructions.context} {localRunInstructions.frontendShortcut}
         </p>
-        <pre>{`cd human-ai-design-system/frontend
-bun install
-bun dev`}</pre>
+        <pre>{localRunCommandBlock}</pre>
       </div>
     </section>
   )

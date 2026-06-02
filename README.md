@@ -94,13 +94,15 @@ docs/       Case-study notes and implementation documentation
 
 ## Run Locally
 
-Start the frontend app:
+Clone the repo, then run these commands from the directory containing the cloned repo:
 
 ```bash
-cd frontend
+cd human-ai-design-system/frontend
 bun install
 bun dev
 ```
+
+If your terminal is already inside `frontend/`, skip the first line.
 
 The frontend usually runs at:
 
