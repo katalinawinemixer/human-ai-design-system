@@ -36,7 +36,8 @@ Props:
 
 | Prop | Type | Purpose |
 | --- | --- | --- |
-| `status` | `string` | Feedback state text |
+| `status` | `string` | Optional feedback state text; defaults to the current selection or a request for feedback |
+| `onSelect` | `(selection: FeedbackSelection) => void` | Receives the selected feedback value; use with `selected` for controlled state |
 | `selected` | `'useful' \| 'speculative' \| 'unhelpful'` | Highlighted feedback control |
 
 ## AgentTimeline

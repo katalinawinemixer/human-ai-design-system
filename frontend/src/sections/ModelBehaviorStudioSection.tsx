@@ -11,6 +11,7 @@ import {
 import { ComparisonWorkspace } from '../components/ComparisonWorkspace'
 import { EvalScorecard } from '../components/EvalScorecard'
 import { FeedbackBar } from '../components/FeedbackBar'
+import type { FeedbackSelection } from '../components/FeedbackBar'
 import { PromptHistory } from '../components/PromptHistory'
 import { SectionHeader } from '../components/SectionHeader'
 import { SignalBadge } from '../components/SignalBadge'
@@ -57,6 +58,7 @@ export function ModelBehaviorStudioSection() {
       ]),
     ),
   )
+  const [reviewerFeedback, setReviewerFeedback] = useState<Record<string, FeedbackSelection>>({})
   const [exportRecords, setExportRecords] = useState<Record<string, string>>({})
 
   const filteredProfiles = behaviorProfiles.filter(
@@ -65,6 +67,10 @@ export function ModelBehaviorStudioSection() {
   const profile: BehaviorProfile =
     behaviorProfiles.find((item) => item.name === activeProfileName) ??
     behaviorProfiles[0]
+  const feedbackSelection = reviewerFeedback[profile.name] ?? profile.feedbackState
+  const feedbackStatus = reviewerFeedback[profile.name]
+    ? { useful: 'Marked useful', speculative: 'Marked too speculative', unhelpful: 'Marked unhelpful' }[feedbackSelection]
+    : profile.feedbackStatus
   const activePrompt = promptDrafts[profile.name] ?? profile.prompt
   const selectedResponseTitle =
     selectedResponses[profile.name] ??
@@ -135,7 +141,7 @@ export function ModelBehaviorStudioSection() {
         `Eval run: ${profile.lastRun}`,
         `Selected response: ${selectedResponseTitle}`,
         `Decision: ${activeReportRows[0][1]}`,
-        `Reviewer signal: ${profile.feedbackStatus}`,
+        `Reviewer signal: ${feedbackStatus}`,
       ].join('\n'),
     })
     setReportStatus('Export ready')
@@ -332,8 +338,13 @@ export function ModelBehaviorStudioSection() {
               <PromptHistory items={activeHistory} />
             </div>
             <FeedbackBar
-              selected={profile.feedbackState}
-              status={profile.feedbackStatus}
+              selected={feedbackSelection}
+              status={feedbackStatus}
+              onSelect={(selection) => {
+                setReviewerFeedback((feedback) => ({ ...feedback, [profile.name]: selection }))
+                setReportStatus('Draft report')
+                setExportRecords(removeCurrentExport)
+              }}
             />
           </div>
         </div>
