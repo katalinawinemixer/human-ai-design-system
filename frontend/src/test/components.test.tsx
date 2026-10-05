@@ -162,7 +162,7 @@ describe('ConfidenceMeter', () => {
 describe('FeedbackBar', () => {
   it('renders default status text', () => {
     render(<FeedbackBar />)
-    expect(screen.getByText('Feedback captured for behavior tuning')).toBeInTheDocument()
+    expect(screen.getByText('Choose feedback for this response')).toBeInTheDocument()
   })
 
   it('renders all three feedback buttons', () => {
